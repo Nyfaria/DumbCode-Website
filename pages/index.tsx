@@ -37,8 +37,8 @@ const HomePage = () => {
         </section>
 
         <section className="h-screen w-screen flex flex-row">
-          <div className="translate-y-1/3 h-full translate-x-44">
-            <div className="">
+          <div className="text-center lg:text-left translate-y-1/3 h-full lg:translate-x-44 w-full xl:w-auto">
+            <div>
               <h1 className="text-xl font-semibold -mb-2 text-neutral-500">POWERED BY:</h1>
               <h1 className="text-6xl font-semibold">DumbCode Studio</h1>
             </div>
