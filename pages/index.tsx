@@ -46,24 +46,21 @@ const HomePage = () => {
             <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-12 rounded-md">View More</button>
           </div>
           <div className="relative left-40 place-self-center translate-x-full hidden 2xl:block">
-            <div className="text-center group rounded-md bg-yellow-500 aspect-video w-96 translate-y-1/2 -translate-x-8 -rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${project})` }}>
+            <div className="text-center group rounded-md aspect-video w-96 translate-y-1/2 -translate-x-8 -rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${project})` }}>
               <p className="bg-purple-500 rounded-xl w-48 rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Project Management</p>
             </div>
-            <div className="text-center group rounded-md bg-red-500 aspect-video w-96 translate-y-10 -rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${modeler})` }}>
+            <div className="text-center group rounded-md aspect-video w-96 translate-y-10 -rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${modeler})` }}>
               <p className="bg-blue-500 rounded-xl w-48 rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Modeler</p>
             </div>
-            <div className="text-center group rounded-md bg-green-500 aspect-video w-96 z-10 translate-x-5 hover:scale-150 transition-transform hover:relative hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${mapper})` }}>
+            <div className="text-center group rounded-md aspect-video w-96 z-10 translate-x-5 hover:scale-150 transition-transform hover:relative hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${mapper})` }}>
               <p className="bg-teal-500 rounded-xl w-48 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 transition-transform px-2 shadow-xl">Texture Mapper</p>
             </div>
-            <div className="text-center group rounded-md bg-blue-500 aspect-video w-96 -translate-y-10 rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${texturer})` }}>
+            <div className="text-center group rounded-md aspect-video w-96 -translate-y-10 rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${texturer})` }}>
               <p className="bg-green-500 rounded-xl w-48 -rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Texturer</p>
             </div>
-            <div className="text-center group rounded-md bg-purple-500 aspect-video w-96 -translate-y-1/2 -translate-x-8 rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${animator})` }}>
+            <div className="text-center group rounded-md aspect-video w-96 -translate-y-1/2 -translate-x-8 rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${animator})` }}>
               <p className="bg-yellow-500 rounded-xl w-48 -rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Animator</p>
             </div>
-          </div>
-          <div>
-
           </div>
         </section>
 
