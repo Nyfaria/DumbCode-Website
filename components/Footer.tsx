@@ -7,10 +7,12 @@ const Footer = () => {
         <div className="text-neutral-700 text-xs mx-4 w-1/6">
           <h1 className="text-3xl">Stay Connected</h1>
           <p>Join our community of over 500 users following our mod. We post updates on all our products on our media locations.</p>
-          <a className="text-blue-500"><Link href="/discord">Discord</Link></a><br />
+          <a className="text-blue-500" href="https://discord.gg/6mygAnq">Discord</a><br />
+          <a className="text-blue-500" href="https://github.com/Dumb-Code">GitHub</a><br />
           <a className="text-blue-500" href="https://twitter.com/dumbcodemc">Twitter</a><br />
           <a className="text-blue-500" href="https://www.deviantart.com/projectnublar">Devianart</a><br />
           <a className="text-blue-500" href="https://www.youtube.com/channel/UCjGWjtS8OMznjzTzpxQ0QYQ">YouTube</a><br />
+          <a className="text-blue-500" href="https://www.artstation.com/dumbcodemc">ArtStation</a><br />
         </div>
         <div className="text-neutral-700 text-xs mx-4 w-1/3">
           <h1 className="text-3xl">Our Mission</h1>
