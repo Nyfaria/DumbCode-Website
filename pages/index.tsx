@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import TeamCarousel from '../components/TeamCarousel';
 
-
 const banner = '/images/project_nublar/squad.jpg'
 const project_nublar = '/images/project_nublar/brachi.jpg'
 const dumb_library = '/images/dumb_library.bmp'
