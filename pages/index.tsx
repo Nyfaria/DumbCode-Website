@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import TeamCarousel from '../components/TeamCarousel';
 
 
 const banner = '/images/project_nublar/squad.jpg'
@@ -64,8 +65,41 @@ const HomePage = () => {
           </div>
         </section>
 
+        <section className="xl:h-screen w-screen bg-neutral-900 pt-10 overflow-hidden">
+          <div className="text-center lg:text-left my-10 lg:translate-x-44 w-full">
+            <h1 className="text-6xl font-semibold">DumbCode Mods</h1>
+            <p className="font-semibold text-md text-neutral-500 ml-1">The cool stuff we've made for players and modders.</p>
+          </div>
+
+          <div className="md:flex flex-row 2xl:mx-40 mx-4">
+            <ModCard title="DumbLibrary" img={ dumb_library } desc="A Minecraft modding library made for DumbCode mods. It builds off of the library: LLibrary (See Below), and includes animation among other useful tools."/>
+            <ModCard title="Project: Nublar" img={ project_nublar } desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game."/>
+            <ModCard title="Gradlehook" img={ gradlehook } desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data"/>
+          </div>
+        </section>
+
+        <section className="h-96 w-screen">
+          <div className="text-center lg:text-left my-10 lg:translate-x-44 w-full">
+            <h1 className="text-6xl font-semibold">DumbCode Team</h1>
+            <p className="font-semibold text-md text-neutral-500 ml-1">The epic people behind our projects.</p>
+          </div>
+
+          <TeamCarousel />
+        </section>
+
       </div>
       <Footer />
+    </div>
+  );
+}
+
+const ModCard = ({ title, desc, img }: { title: string, desc: string, img:string}) => {
+  return (
+    <div className="hover:scale-105 flex-grow bg-neutral-800 mx-4 rounded-md lg:w-1/3 w-full text-center transition-transform my-5">
+      <div className="aspect-video rounded-t-md bg-center bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
+      <h1 className="text-4xl text-center my-6">{title}</h1>
+      <p className="text-xs xl:px-20 px-4 md:px-6">{desc}</p>
+      <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 mb-4 rounded-md">View More</button>
     </div>
   );
 }
