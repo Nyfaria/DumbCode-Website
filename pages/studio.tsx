@@ -26,7 +26,7 @@ const StudioPage = () => {
             <Header pageName="Studio" />
             <Navbar />
 
-            <section className="w-screen h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${banner})` }}>
+            <section className="w-screen h-screen 2xl:h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${banner})` }}>
                 <div className="translate-y-1/3 h-full text-center text-white">
                     <div className="flex flex-row w-screen justify-center">
                         <h1 className="text-6xl font-semibold">DumbCode</h1>
@@ -36,7 +36,7 @@ const StudioPage = () => {
                 </div>
             </section>
 
-            <div className="absolute w-2/3 bg-neutral-900 aspect-video bottom-0 translate-x-1/4 translate-y-2/3 rounded-md">
+            <div className="2xl:absolute w-full 2xl:w-2/3 lg:bg-neutral-900 aspect-video 2xl:bottom-0 2xl:translate-x-1/4 2xl:translate-y-2/3 2xl:rounded-md">
                 <div className="w-full p-10">
                     <div className="h-full text-white">
                         <h1 className="text-3xl font-semibold">Your First Line of Defense...</h1>
@@ -55,16 +55,16 @@ const StudioPage = () => {
                             piece of software as special to your team as it has been to ours.
                         </div>
                         <div className="flex-grow pl-10">
-                            <div className="w-[600px] aspect-video rounded-md absolute right-0 translate-x-20 hover:scale-105 transition-transform hover:z-50 bg-center bg-cover"
+                            <div className="w-[300px] lg:w-[600px] aspect-video rounded-md absolute md:right-0 md:-translate-x-10 lg:translate-x-20 lg:hover:scale-105 transition-transform hover:z-50 bg-center bg-cover"
                                 style={{ backgroundImage: `url(${promo1})` }}>
                             </div>
-                            <div className="w-[400px] aspect-video rounded-md absolute translate-y-12 hover:scale-110 transition-transform bg-center bg-cover"
+                            <div className="w-[300px] lg:w-[400px] hidden md:block aspect-video rounded-md absolute lg:translate-y-12 lg:hover:scale-110 transition-transform bg-center bg-cover"
                                 style={{ backgroundImage: `url(${promo2})` }}>
                             </div>
-                            <div className="w-[550px] aspect-video rounded-md absolute translate-x-20 translate-y-80 hover:scale-110 transition-transform bg-center bg-cover"
+                            <div className="w-[300px] lg:w-[550px] aspect-video rounded-md absolute lg:translate-x-20 translate-y-48 lg:translate-y-80 lg:hover:scale-110 transition-transform bg-center bg-cover"
                                 style={{ backgroundImage: `url(${promo3})` }}>
                             </div>
-                            <div className="w-[300px] p-10 text-center text-white aspect-video bg-neutral-700 rounded-md absolute translate-x-20 right-0 translate-y-96 bg-center bg-cover">
+                            <div className="w-[200px] md:w-[300px] lg:w-[300px] p-4 md:p-10 text-center text-white aspect-video -translate-x-10 bg-neutral-700 rounded-md absolute lg:-translate-x-10 2xl:translate-x-20 right-0 -translate-y-40 md:translate-y-48 lg:translate-y-96 bg-center bg-cover">
                                 <p className="text-xs underline font-semibold">PROJECT IMAGE CREDITS</p>
                                 <p className="font-semibold">PROJECT: NUBLAR</p>
                                 <p className="font-semibold">GALAXIES: Parzi's Star Wars Mod</p>
@@ -74,14 +74,14 @@ const StudioPage = () => {
                 </div>
             </div>
 
-            <section className="w-screen h-[80vh] bg-neutral-800"></section>
+            <section className="hidden lg:block w-screen h-[20vh] 2xl:h-[80vh] bg-opacity-60 2xl:bg-opacity-100 bg-neutral-900"></section>
 
             <section className="w-screen bg-cover bg-center bg-neutral-900 bg-opacity-60">
-                <div className="py-10 h-full text-white px-80">
+                <div className="py-10 h-full text-white px-14 lg:px-80">
                     <h1 className="text-6xl font-semibold">Everything You Need</h1>
                     <p className="font-semibold text-md ml-1 text-neutral-400 mt-2">And just a little bit more.</p>
                 </div>
-                <div className="absolute right-0 -translate-y-80 -translate-x-40">
+                <div className="absolute right-0 -translate-y-80 -translate-x-40 hidden 2xl:block">
                     <Image src={worrt} width={300} height={300} />
                 </div>
                 <AboutViewSection
@@ -121,15 +121,15 @@ const StudioPage = () => {
 
 const AboutViewSection = ({ flip, title, subtitle, content, image }: { flip: boolean, title: string, subtitle: string, content: JSX.Element, image: string }) => {
     return (
-        <div className={(flip ? "flex-row-reverse" : "flex-row" ) + " flex  mx-40 pb-10"}>
-            <div className="w-1/3 bg-neutral-900 rounded-md mx-10 p-4">
+        <div className={(flip ? "lg:flex-row-reverse" : "lg:flex-row" ) + " flex-col-reverse flex pr-8 lg:pr-0 lg:mx-10 2xl:mx-40 pb-10"}>
+            <div className="w-full lg:w-1/3 bg-neutral-900 rounded-b-md lg:rounded-t-md mx-1 2xl:mx-10 p-4">
                 <div className="text-white">
                     <h1 className="text-3xl font-semibold">{title}</h1>
                     <p className="font-semibold text-xs ml-1 text-neutral-400">{subtitle}</p>
                 </div>
                 {content}
             </div>
-            <div className="w-2/3 aspect-video bg-neutral-800 rounded-md mx-10 hover:scale-105 transition-transform bg-center bg-cover"
+            <div className="w-full lg:w-2/3 aspect-video bg-neutral-800 rounded-t-md lg:rounded-b-md mx-1 2xl:mx-10 2xl:hover:scale-105 transition-transform bg-center bg-cover"
                 style={{ backgroundImage: `url(${image})` }}>
             </div>
         </div>
