@@ -41,7 +41,3 @@ export const pastMembers: PastMembersType[] = [
 ]
 
 export const allMembers: PrimaryMemberType[] | CurrentMemberType[] | PastMembersType[] = [...primaryMembers, ...currentMembers, ...pastMembers];
-
-export const gradleHookContributors = [
-    { name: "wynprice", role: "developer" }
-];

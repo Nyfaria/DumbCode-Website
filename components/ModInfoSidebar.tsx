@@ -2,9 +2,7 @@ import { ModInfoType } from "../data/modData";
 import { allMembers } from "../data/team";
 import { SvgTwitter } from "./Icons";
 
-export type ModContributorType = {name: string, role: string}
-
-const ModInfoSidebar = ({ members, modInfo }: { members: ModContributorType[], modInfo: ModInfoType }) => {
+const ModInfoSidebar = ({ modInfo }: { modInfo: ModInfoType }) => {
 
     return (
         <div className="w-96 bg-transparent text-white sticky">
@@ -32,7 +30,7 @@ const ModInfoSidebar = ({ members, modInfo }: { members: ModContributorType[], m
             <div>
                 <h2 className="font-semibold pt-10">Contributors</h2>
                 <div>
-                    {members.map((member, key) => <ContributorTag key={ member.name + key } member={member.name} role={member.role} />)}
+                    {modInfo.contributors.map((member, key) => <ContributorTag key={ member.name + key } member={member.name} role={member.role} />)}
                 </div>
             </div>
         </div>
