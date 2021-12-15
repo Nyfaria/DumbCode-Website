@@ -29,7 +29,7 @@ const MobileNavbar = () => {
 
     return (
         <>
-            <div className="bg-neutral-900 w-screen h-14 pl-10 flex flex-row">
+            <div className="bg-neutral-900 w-screen h-14 md:pl-10 flex flex-row">
                 <NavbarBrandButton />
                 <div className="flex-grow"></div>
                 <MobileNavOpenButton open={open} toggleOpen={toggleOpen} />
@@ -41,7 +41,7 @@ const MobileNavbar = () => {
 
 const MobileNavOpenButton = ({ open, toggleOpen }: { open: boolean, toggleOpen: any }) => {
     return (
-        <div className="mt-5 mr-10 group" onClick={toggleOpen}>
+        <div className="mt-5 mr-2 md:mr-10 group" onClick={toggleOpen}>
             <div className={(open ? "translate-y-1 -rotate-45 group-hover:bg-red-500" : "-translate-y-2 group-hover:bg-neutral-500") + " rounded-full h-1 w-8 bg-white transition-all"}></div>
             <div className={(open ? "opacity-0 group-hover:bg-red-500" : "opacity-100 group-hover:bg-neutral-500") + " rounded-full h-1 w-8 bg-white  transition-all"}></div>
             <div className={(open ? "-translate-y-1 rotate-45 group-hover:bg-red-500" : "translate-y-2 group-hover:bg-neutral-500") + " rounded-full h-1 w-8 bg-white transition-all"}></div>

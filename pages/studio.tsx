@@ -28,7 +28,7 @@ const StudioPage = () => {
 
             <section className="w-screen h-screen 2xl:h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${banner})` }}>
                 <div className="translate-y-1/3 h-full text-center text-white">
-                    <div className="flex flex-row w-screen justify-center">
+                    <div className="md:flex md:flex-row w-screen justify-center">
                         <h1 className="text-6xl font-semibold">DumbCode</h1>
                         <h1 className="text-6xl font-semibold text-blue-400">Studio</h1>
                     </div>
@@ -77,7 +77,7 @@ const StudioPage = () => {
             <section className="hidden lg:block w-screen h-[20vh] 2xl:h-[80vh] bg-opacity-60 2xl:bg-opacity-100 bg-neutral-900 2xl:bg-neutral-800"></section>
 
             <section className="w-screen bg-cover bg-center bg-neutral-900 bg-opacity-60">
-                <div className="py-10 h-full text-white px-14 lg:px-80">
+                <div className="py-10 h-full text-white px-14 lg:px-40 2xl:px-80">
                     <h1 className="text-6xl font-semibold">Everything You Need</h1>
                     <p className="font-semibold text-md ml-1 text-neutral-400 mt-2">And just a little bit more.</p>
                 </div>
@@ -121,15 +121,15 @@ const StudioPage = () => {
 
 const AboutViewSection = ({ flip, title, subtitle, content, image }: { flip: boolean, title: string, subtitle: string, content: JSX.Element, image: string }) => {
     return (
-        <div className={(flip ? "lg:flex-row-reverse" : "lg:flex-row" ) + " flex-col-reverse flex pr-8 lg:pr-0 lg:mx-10 2xl:mx-40 pb-10"}>
-            <div className="w-full lg:w-1/3 bg-neutral-900 rounded-b-md lg:rounded-t-md mx-1 2xl:mx-10 p-4">
+        <div className={(flip ? "lg:flex-row-reverse" : "lg:flex-row" ) + " flex-col-reverse flex md:pr-8 lg:pr-0 mx-0 lg:mx-10 2xl:mx-40 md:pb-10"}>
+            <div className="w-full lg:w-1/3 bg-neutral-900 md:rounded-b-md lg:rounded-t-md mx-1 2xl:mx-10 p-4">
                 <div className="text-white">
                     <h1 className="text-3xl font-semibold">{title}</h1>
                     <p className="font-semibold text-xs ml-1 text-neutral-400">{subtitle}</p>
                 </div>
                 {content}
             </div>
-            <div className="w-full lg:w-2/3 aspect-video bg-neutral-800 rounded-t-md lg:rounded-b-md mx-1 2xl:mx-10 2xl:hover:scale-105 transition-transform bg-center bg-cover"
+            <div className="w-full lg:w-2/3 aspect-video bg-neutral-800 md:rounded-t-md lg:rounded-b-md mx-1 2xl:mx-10 2xl:hover:scale-105 transition-transform bg-center bg-cover"
                 style={{ backgroundImage: `url(${image})` }}>
             </div>
         </div>
