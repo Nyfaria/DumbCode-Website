@@ -16,6 +16,18 @@ export const primaryMembers: PrimaryMemberType[] = [
             { "platform": "youtube", "link": "https://www.youtube.com/channel/UCVNgt2sHMnhpIveeKeSAyVQ" },
             { "platform": "artstation", "link": "https://www.artstation.com/neusfear" },
             { "platform": "deviantart", "link": "https://www.deviantart.com/neusfear" }
+        ],
+    },
+    {
+        "name": "Brotat",
+        "imageName": "brotat.png",
+        "bio": "Brotat is one of the team's texture artists for the Project Nublar Mod. He works on the smaller textures of the mod along with some of the dinosaur assets in order to make sure the mod is released at a top notch quality.",
+        "roles": ["texture_artist"],
+        "socials": [
+            { "platform": "discord", "link": "Brotat#7369" },
+            { "platform": "twitter", "link": "https://twitter.com/Sunking64" },
+            { "platform": "github", "link": "https://github.com/Brotatsun64" },
+            { "platform": "youtube", "link": "https://www.youtube.com/channel/UCGfffU8rEX43SmACBAFjUsQ" }
         ]
     }
 ]
@@ -24,11 +36,51 @@ export const currentMembers: CurrentMemberType[] = [
     {
         "name": "Sindavar",
         "imageName": "sindavar.png",
-        "roles": ["texture_artist"],
+        "roles": ["texture_artist", "modeler"],
         "socials": [
             { "platform": "discord", "link": "Sindavar#0303" },
             { "platform": "twitter", "link": "https://twitter.com/sindavar33" },
-            { "platform": "github", "link": "https://github.com/Sindavar" }
+            { "platform": "github", "link": "https://github.com/Sindavar" },
+        ]
+    },
+    {
+        "name": "Gegy",
+        "imageName": "gegy.png",
+        "roles": ["programmer"],
+        "socials": [
+            { "platform": "discord", "link": "Gegy#9970" },
+            { "platform": "twitter", "link": "https://twitter.com/gegy1000" },
+            { "platform": "github", "link": "https://github.com/Gegy" }
+        ]
+    },
+    {
+        "name": "Lucca",
+        "imageName": "lucca.png",
+        "roles": ["graphic_designer", "concept_artist"],
+        "socials": [
+            { "platform": "twitter", "link": "https://twitter.com/Lucca2951" },
+            { "platform": "artstation", "link": "https://www.artstation.com/lucca2951" },
+        ]
+    },
+    {
+        "name": "FloofHips",
+        "imageName": "floofhips.jpg",
+        "roles": ["texture_artist"],
+        "socials": [
+            { "platform": "discord", "link": "Reda#8727" },
+            { "platform": "twitter", "link": "https://twitter.com/FloofHips" },
+            { "platform": "github", "link": "https://github.com/FloofHips" },
+            { "platform": "youtube", "link": "https://youtube.com/c/FloofHips%22%7D" }
+        ]
+    },
+    {
+        "name": "Loxures",
+        "imageName": "loxures.jpg",
+        "roles": ["modeler"],
+        "socials": [
+            { "platform": "discord", "link": "Loxures#5985" },
+            { "platform": "twitter", "link": "https://twitter.com/Loxures_" },
+            { "platform": "github", "link": "https://github.com/Loxures" }
         ]
     }
 ]

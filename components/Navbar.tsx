@@ -86,6 +86,7 @@ const NavbarItems = () => {
                 <NavbarButton name="STUDIO" route="/studio" />
                 <NavbarButton name="TEAM" route="/team" />
                 <NavbarButton name="MODS" route="/mods" />
+                <NavbarButton name="BLOG" route="/blog" />
             </div>
             <div className="lg:pr-4 lg:mr-10 pt-3 flex flex-row bg-neutral-900 pb-4 lg:pb-0">
                 <div className="lg:hidden flex-grow"></div>
