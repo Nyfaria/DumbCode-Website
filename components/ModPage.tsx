@@ -12,7 +12,7 @@ const ModPage = ({ modInfo, children }: { modInfo: ModInfoType, children: React.
         <div className="flex flex-col md:flex-row-reverse px-10 lg:px-32 2xl:px-60">
             <ModInfoSidebar modInfo={ modInfo } />
             <section className="w-screen bg-neutral-800 pt-10 overflow-hidden pr-20 2xl:pr-20">
-                <h1 className="text-5xl font-semibold text-white">GradleHook</h1>
+                <h1 className="text-5xl font-semibold text-white">{modInfo.name}</h1>
                 { children }
             </section>
         </div>
