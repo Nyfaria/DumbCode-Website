@@ -7,7 +7,7 @@ const ModInfoSidebar = ({ modInfo }: { modInfo: ModInfoType }) => {
     return (
         <div className="w-96 bg-transparent text-white sticky">
             <h2 className="font-semibold pt-10">About</h2>
-            <p className="text-xs pb-4">{ modInfo.description }</p>
+            <p className="text-xs pb-4 mr-10">{ modInfo.description }</p>
             <div className="flex flex-row">
                 <SvgSource className="w-4 h-4 pt-1 mt-0.5" />
                 <a target="_blank" rel="noreferrer" href={modInfo.source} className="text-xs ml-2 py-1 underline">View Source</a>
@@ -22,7 +22,7 @@ const ModInfoSidebar = ({ modInfo }: { modInfo: ModInfoType }) => {
             </div>
             <div className={ modInfo.download || "hidden"}>
                 <h2 className="font-semibold pt-10">Get the mod</h2>
-                <a target="_blank" rel="noreferrer" href={modInfo.download} className="flex flex-row bg-blue-400 hover:bg-blue-500 rounded-md justify-center p-1.5 text-xs">
+                <a target="_blank" rel="noreferrer" href={modInfo.download} className="flex flex-row bg-blue-400 hover:bg-blue-500 rounded-md justify-center p-1.5 mr-10 md:mr-0 text-xs">
                     <SVGDownload className="w-4 h-4 mr-2" />
                     Download
                 </a>

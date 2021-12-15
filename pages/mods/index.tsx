@@ -9,7 +9,7 @@ const gradlehook = '/images/gradle_hook.bmp'
 
 const ModsPage = () => {
     return (
-        <div className="overflow-x-hidden">
+        <div className="overflow-x-hidden bg-neutral-800">
             <Header pageName="Mods" />
             <Navbar />
             <section className="w-screen bg-neutral-800 pt-10 overflow-hidden">
@@ -37,8 +37,8 @@ const ModSection = ({ title, desc, route, img, rotation }: { title: string, desc
     }
 
     return (
-        <section className="w-screen bg-neutral-800 flex lg:flex-row flex-col-reverse md:px-10 2xl:px-40">
-            <div className="md:rounded-b-md lg:rounded-t-md w-full lg:w-1/3 bg-neutral-900 transition-transform xl:mx-10 p-5 flex flex-col lg:m-10">
+        <section className="w-screen bg-neutral-800 flex lg:flex-row flex-col-reverse md:mb-10 md:px-10 2xl:px-40">
+            <div className="md:rounded-b-md lg:rounded-t-md w-full lg:w-1/3 bg-neutral-900 transition-transform xl:mx-10 p-5 flex flex-col lg:mx-2 2xl:m-10">
                 <h1 className="text-4xl text-white">{title}</h1>
                 <p className="text-xs my-4 text-neutral-400">{desc}</p>
                 <div className="relative flex-grow hidden xl:block">
@@ -46,7 +46,7 @@ const ModSection = ({ title, desc, route, img, rotation }: { title: string, desc
                 </div>
                 <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 rounded-md" onClick={handleClick}>View More</button>
             </div>
-            <div className={"shadow-lg w-full lg:w-2/3 aspect-video lg:hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:m-10 " + rotation}>
+            <div className={"shadow-lg w-full lg:w-2/3 aspect-video lg:hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:mx-2 2xl:m-10 " + rotation}>
                 <div className="aspect-video md:rounded-t-md lg:rounded-b-md bg-left bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
             </div>
         </section>
