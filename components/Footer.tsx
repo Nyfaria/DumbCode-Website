@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
         <div className="text-neutral-700 text-xs mx-4 w-1/3">
           <h1 className="text-3xl">Our Mission</h1>
-          <p>The DumbCode <a className="text-blue-500"><Link href="/team">Team</Link></a> is commited to bringing high quality content to members of our comminity and expanding our community to new interested people. We believe in equal opportunity to contributors and we will strive to create a fair workplace while keeping the progress organized and thought out.</p>
+          <div>The DumbCode <div className="text-blue-500 inline-block"><Link href="/team">Team</Link></div> is commited to bringing high quality content to members of our comminity and expanding our community to new interested people. We believe in equal opportunity to contributors and we will strive to create a fair workplace while keeping the progress organized and thought out.</div>
         </div>
         <div className="mx-4 w-1/6">
           <div className="text-neutral-700 text-xs">
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           <div className="text-neutral-700 text-xs">
             <p className="my-0">Mods</p>
-            <div className="text-blue-500"><Link href="../mod/projectnublar">Project: Nublar</Link></div><br />
+            <div className="text-blue-500"><Link href="/mod/projectnublar">Project: Nublar</Link></div><br />
             <div className="text-blue-500"><Link href="/mod/dumblibrary">Dumb Library</Link></div><br />
           </div>
           <br />

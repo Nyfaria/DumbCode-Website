@@ -4,36 +4,31 @@ export const Carousel2 = ({ images, autoAdvance }: { images: string[], autoAdvan
 
     const carouselImages = [...images, images[0]]
 
-    async function delay(n: number){
-        return new Promise(function(resolve){
-            setTimeout(resolve, n);
-        });
-    }
-
     const refElement = useRef<HTMLDivElement>(null)
-    useEffect(() => {
 
-        async function resetCarousel() { 
-            if (refElement.current !== null) { 
-                refElement.current.scrollLeft = 0;
-                refElement.current.scrollBy({ left: (refElement.current.scrollWidth / (images.length + 1)), behavior: 'smooth' })
-            }
-        }
+    if (autoAdvance) { 
+        useEffect(() => {
 
-        const interval = setInterval(() => {
-            if (refElement.current !== null) {
-                refElement.current.scrollBy({ left: (refElement.current.scrollWidth / (images.length + 1)), behavior: 'smooth' })
-                console.log(refElement.current.scrollLeft + " " + refElement.current.scrollWidth)
-                if (refElement.current.scrollLeft + ((refElement.current.scrollWidth / (images.length + 1)) * 2) >= refElement.current.scrollWidth) { 
-                    resetCarousel();
-                    console.log("should reset")
+            async function resetCarousel() { 
+                if (refElement.current !== null) { 
+                    refElement.current.scrollLeft = 0;
+                    refElement.current.scrollBy({ left: (refElement.current.scrollWidth / (images.length + 1)), behavior: 'smooth' })
                 }
             }
-        }, 3000)
-        return () => {
-            clearInterval(interval)
-        }
-    }, [])
+    
+            const interval = setInterval(() => {
+                if (refElement.current !== null) {
+                    refElement.current.scrollBy({ left: (refElement.current.scrollWidth / (images.length + 1)), behavior: 'smooth' })
+                    if (refElement.current.scrollLeft + ((refElement.current.scrollWidth / (images.length + 1)) * 2) >= refElement.current.scrollWidth) { 
+                        resetCarousel();
+                    }
+                }
+            }, 3000)
+            return () => {
+                clearInterval(interval)
+            }
+        }, [])
+    }
 
     return (
         <div ref={refElement} className="w-full h-full overflow-x-hidden flex flex-row">
