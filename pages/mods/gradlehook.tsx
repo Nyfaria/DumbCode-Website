@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import { additionalTasks, fields, legacyPluginApplication, messageFirstOption, pluginDSL, simplePlugin } from "../../data/gradlehookexamples";
 
 const GradleHookPage = () => {
     return (
@@ -20,79 +21,33 @@ const GradleHookPage = () => {
                 <section className="mt-10">
                     <h1 className="text-3xl text-white">Applying the Plugin</h1>
                     <p className="text-neutral-500">Using the <a target="_blank" href="https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block" className="cursor-pointer underline">plugin DSL</a>:</p>
-                    <CodeHilight language="javascript" code={ 
-`plugins {
-    id "net.dumbcode.gradlehook" version "1.2.0"
-}`
-                    } />
+                    <CodeHilight language="javascript" code={pluginDSL} />
                 </section>
 
                 <section className="mt-5">
                     <p className="text-neutral-500">Using the <a target="_blank" href="https://docs.gradle.org/current/userguide/plugins.html#sec:old_plugin_application" className="cursor-pointer underline">legacy plugin application</a>:</p>
-                    <CodeHilight language="javascript" code={ 
-`buildscript {
-    repositories {
-        maven {
-          url "https://plugins.gradle.org/m2/"
-        }
-    }
-}
-    dependencies {
-        classpath "net.dumbcode.gradlehook:GradleHook:1.2.0"
-    }
-}
-
-apply plugin: "net.dumbcode.gradlehook"`
-                    } />
+                    <CodeHilight language="javascript" code={legacyPluginApplication} />
                 </section>
 
                 <section className="mt-10">
                     <h1 className="text-3xl text-white">Simple Plugin Example</h1>
                     <p className="text-neutral-500">The bare minimum of a plugin using gradlehook</p>
                     <NoteTag note="The urlToken should be private." />
-                    <CodeHilight language="javascript" code={ 
-`gradlehook {
-    urlToken "http://example.com/webhook" //Keep private.
-    addArtifact jar
-}`
-                    } />
+                    <CodeHilight language="javascript" code={simplePlugin} />
                 </section>
 
                 <section className="mt-10">
                     <h1 className="text-3xl text-white">Additional Tasks</h1>
                     <p className="text-neutral-500">You can apply multiple tasks to be sent over. In this senario 2 files would be sent.</p>
                     <NoteTag note="The urlToken should be private." />
-                    <CodeHilight language="javascript" code={ 
-`task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = "sources"
-    from sourceSets.main.allSource
-}
-
-artifacts {
-    archives sourcesJar
-}
-
-gradlehook {
-    urlToken "http://example.com/webhook"
-    addArtifact jar
-    addArtifact sourcesJar
-}`
-                    } />
+                    <CodeHilight language="javascript" code={additionalTasks} />
                 </section>
 
                 <section className="mt-10">
                     <h1 className="text-3xl text-white">Fields</h1>
                     <p className="text-neutral-500">When sending the request, you might want to add additional data. This can be done with the addField method. For example, sending a webhook to a discord server would be:</p>
                     <NoteTag note="The urlToken should be private." />
-                    <CodeHilight language="javascript" code={ 
-`gradlehook {
-    urlToken 'https://discordapp.com/api/webhooks/012345678912345678/foobar' //keep private
-    
-    addField 'payload_json', '{ "embeds": [{ "timestamp": "{{datetime}}" }] }'
-    
-    addArtifact jar
-}`
-                    } />
+                    <CodeHilight language="javascript" code={fields} />
                 </section>
 
                 <section className="mt-10">
@@ -110,14 +65,7 @@ gradlehook {
                     <h1 className="text-3xl text-white">Message First Option</h1>
                     <p className="text-neutral-500">In some senarios, you want the text message to sent as a seperate webhook before the build webhooks. The following would mean a webhook with the field "id" would be sent, then once an HTTP_OK response code is sent, the artifacts are sent over in a webhook.</p>
                     <NoteTag note="The urlToken should be private." />
-                    <CodeHilight language="javascript" code={ 
-`gradlehook {
-    urlToken "http://example.com/webhook"
-    addField 'id', 'user2201'
-    addArtifact jar
-    messageFirst
-}`
-                    } />
+                    <CodeHilight language="javascript" code={messageFirstOption} />
                 </section>
 
                 <section className="mt-10 mb-20">
