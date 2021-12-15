@@ -1,6 +1,6 @@
 import { ModInfoType } from "../data/modData";
 import { allMembers } from "../data/team";
-import { SvgTwitter } from "./Icons";
+import { SVGDownload, SvgLicense, SvgSource, SvgWiki } from "./Icons";
 
 const ModInfoSidebar = ({ modInfo }: { modInfo: ModInfoType }) => {
 
@@ -9,21 +9,21 @@ const ModInfoSidebar = ({ modInfo }: { modInfo: ModInfoType }) => {
             <h2 className="font-semibold pt-10">About</h2>
             <p className="text-xs pb-4">{ modInfo.description }</p>
             <div className="flex flex-row">
-                <SvgTwitter className="w-4 h-4 pt-1 mt-0.5" />
+                <SvgSource className="w-4 h-4 pt-1 mt-0.5" />
                 <a target="_blank" href={modInfo.source} className="text-xs ml-2 py-1 underline">View Source</a>
             </div>
             <div className="flex flex-row">
-                <SvgTwitter className="w-4 h-4 pt-1 mt-0.5" />
+                <SvgWiki className="w-4 h-4 pt-1 mt-0.5" />
                 <a target="_blank" href={modInfo.wiki} className="text-xs ml-2 py-1 underline">View Wiki</a>
             </div>
             <div className="flex flex-row">
-                <SvgTwitter className="w-4 h-4 pt-1 mt-0.5" />
+                <SvgLicense className="w-4 h-4 pt-1 mt-0.5" />
                 <a target="_blank" href={modInfo.license} className="text-xs ml-2 py-1 underline">View License</a>
             </div>
             <div className={ modInfo.download || "hidden"}>
                 <h2 className="font-semibold pt-10">Get the mod</h2>
                 <a target="_blank" href={modInfo.download} className="flex flex-row bg-blue-400 hover:bg-blue-500 rounded-md justify-center p-1.5 text-xs">
-                    <SvgTwitter className="w-4 h-4 mr-2" />
+                    <SVGDownload className="w-4 h-4 mr-2" />
                     Download
                 </a>
             </div>
