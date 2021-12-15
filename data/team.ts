@@ -82,6 +82,16 @@ export const currentMembers: CurrentMemberType[] = [
             { "platform": "twitter", "link": "https://twitter.com/Loxures_" },
             { "platform": "github", "link": "https://github.com/Loxures" }
         ]
+    },
+    {
+        "name": "thebradqq",
+        "imageName": "bbq.png",
+        "roles": ["modeler", "texture_artist"],
+        "socials": [
+            { "platform": "discord", "link": "thebbq#8506" },
+            { "platform": "github", "link": "https://github.com/bradleyq" },
+            { "platform": "youtube", "link": "https://www.youtube.com/c/thebradqq" }
+        ]
     }
 ]
 
