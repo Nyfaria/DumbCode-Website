@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { SvgArtstation, SvgDeviantart, SvgDiscord, SvgGithub, SvgTwitter, SvgYoutube } from "../components/Icons";
 import Navbar from "../components/Navbar";
-import { members, MemberType, pastMembers, PastMembersType, primaryMembers, PrimaryMemberType } from "../data/team";
+import { currentMembers, CurrentMemberType, pastMembers, PastMembersType, primaryMembers, PrimaryMemberType } from "../data/team";
 
 const TeamPage = () => {
 
@@ -20,7 +20,7 @@ const TeamPage = () => {
                 {primaryMembers.map((member, key) => <PrimaryMemberCard key={key} member={member} />)}
             </div>
             <div className="bg-neutral-900 bg-opacity-50 px-10 grid grid-cols-5 grid-flow-row">
-                {members.map((member, key) => <MemberCard key={key} member={member} />)}
+                {currentMembers.map((member, key) => <MemberCard key={key} member={member} />)}
             </div>
             <div className="bg-neutral-800 px-10">
                 <section className="w-screen bg-neutral-800 pt-10 overflow-hidden">
@@ -61,7 +61,7 @@ const PrimaryMemberCard = ({ member }: { member: PrimaryMemberType }) => {
     );
 }
 
-const MemberCard = ({ member }: { member: MemberType }) => {
+const MemberCard = ({ member }: { member: CurrentMemberType }) => {
 
     return (
         <div className="w-full mt-10 px-4 mb-10">
