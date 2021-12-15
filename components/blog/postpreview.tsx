@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { PostType } from '../../lib/blogapi'
 import Avatar from './avatar'
 import CoverImage from './coverimage'
 import DateFormatter from './dateformatter'
 
-export default function PostPreview({ post }) {
+export default function PostPreview({ post }: {post: PostType}) {
 
   return (
     <div>

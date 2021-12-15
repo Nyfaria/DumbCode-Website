@@ -7,17 +7,17 @@ import PostHeader from '../../components/blog/postheader'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
-import { getAllPosts, getPostBySlug } from '../../lib/blogapi'
+import { getAllPosts, getPostBySlug, PostType } from '../../lib/blogapi'
 import markdownToHtml from '../../lib/markdownToHtml'
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, morePosts, preview }: {post: PostType, morePosts: PostType[], preview: any}) {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return (
     <div className="overflow-x-hidden">
-      <Header pageName={ post.title } />
+      <Header pageName={post.title} />
       <Navbar />
       <Container>
         {router.isFallback ? (
@@ -36,6 +36,7 @@ export default function Post({ post, morePosts, preview }) {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                slug={post.slug}
               />
               <PostBody content={post.content} />
             </article>
@@ -47,8 +48,8 @@ export default function Post({ post, morePosts, preview }) {
   )
 }
 
-export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
+export async function getStaticProps({ params }: {params:any}) {
+  const post = getPostBySlug<PostType>(params.slug, [
     'title',
     'date',
     'slug',

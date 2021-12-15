@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function CoverImage({ title, src, slug, height, width }) {
+export default function CoverImage({ title, src, slug, height, width }: {title: string, src: string, slug: string | undefined, height: number, width: number}) {
   
   const image = (
     <Image
@@ -16,7 +16,7 @@ export default function CoverImage({ title, src, slug, height, width }) {
 
   return (
     <div className="sm:mx-0">
-      {slug ? <Link as={`/posts/${slug}`} href="/posts/[slug]"><a aria-label={title}>{image}</a></Link> : image}
+      {slug ? <Link as={`/blog/${slug}`} href="/blog/[slug]"><a aria-label={title}>{image}</a></Link> : image}
     </div>
   )
 }

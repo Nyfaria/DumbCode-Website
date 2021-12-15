@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { PostType } from '../../lib/blogapi'
 import Avatar from './avatar'
 import CoverImage from './coverimage'
 import DateFormatter from './dateformatter'
 
-export default function HeroPost({post}) {
+export default function HeroPost({ post }: { post: PostType }) {
   return (
     <section>
       <div className="mb-8 md:mb-16">

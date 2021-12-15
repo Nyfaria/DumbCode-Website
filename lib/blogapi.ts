@@ -1,6 +1,10 @@
 import fs from 'fs'
-import { join } from 'path'
 import matter from 'gray-matter'
+import { join } from 'path'
+
+export type AuthorType = { name: string, picture: string }
+export type OgImageType = { url: string }
+export type PostType = {title: string, slug: string, coverImage: string, date: string, author: AuthorType, excerpt: string, ogImage: OgImageType, content: string}
 
 const postsDirectory = join(process.cwd(), '_posts')
 

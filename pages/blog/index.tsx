@@ -7,15 +7,27 @@ import Navbar from '../../components/Navbar'
 import { getAllPosts } from '../../lib/blogapi'
 
 export default function Index({ allPosts }) {
-  const heroPost = allPosts[0]
+
+  const latestPost = allPosts[0]
   const morePosts = allPosts.slice(1)
+
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-neutral-800">
       <Header pageName="Blog" />
       <Navbar />
+      <section className="w-screen bg-neutral-900 bg-opacity-60 pt-10 overflow-hidden">
+        <Container>
+          <div className="text-center lg:text-left my-10 w-full text-white">
+            <h1 className="text-6xl font-semibold">DumbCode Blog</h1>
+            <p className="font-semibold text-md text-neutral-500 ml-1">See Updates on what we've got cooking.</p>
+          </div>
+        </Container>
+      </section>
       <Container>
-        <div className="pt-10"></div>
-        {heroPost && <HeroPost post={heroPost} />}
+        <div className="text-center lg:text-left my-10 w-full text-white">
+          <h1 className="text-5xl font-semibold">Latest Post</h1>
+        </div>
+        {latestPost && <HeroPost post={latestPost} />}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
       <Footer />
