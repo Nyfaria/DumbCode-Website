@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Carousel from "../../components/Carousel";
+import { Carousel2 } from "../../components/Carousel2";
 import ModPage from "../../components/ModPage";
 import { projectNublarInfo } from "../../data/modData";
 
@@ -18,8 +18,8 @@ const DumbLibraryPage = () => {
     return (
         <ModPage modInfo={projectNublarInfo}>
 
-            <div className="w-full aspect-video mb-32">
-                <Carousel images={[brachi, comp, dilo, gali, mosa, para, rex, squad, trike, velo]} autoAdvance={true} />
+            <div className="w-full aspect-video mt-10">
+                <Carousel2 images={[brachi, comp, dilo, gali, mosa, para, rex, squad, trike, velo]} autoAdvance={true} />
             </div>
 
             <section className="mt-10">
@@ -29,7 +29,7 @@ const DumbLibraryPage = () => {
 
             <section className="mt-10">
                 <h1 className="text-3xl text-white">Requirements</h1>
-                <p className="text-neutral-500">Project Nublar Requires DumbLibary, which can be found on it's mod page <div className="underline inline-block"><Link href="/mods/dumblibrary" >here</Link></div>.</p>
+                <div className="text-neutral-500">Project Nublar Requires DumbLibary, which can be found on it's mod page <div className="underline inline-block"><Link href="/mods/dumblibrary" >here</Link></div>.</div>
             </section>
 
             <section className="mt-10">

@@ -13,7 +13,7 @@ const ModPage = ({ modInfo, children }: { modInfo: ModInfoType, children: React.
                 <ModInfoSidebar modInfo={modInfo} />
                 <section className="w-screen bg-neutral-800 pt-10 overflow-hidden pr-20 2xl:pr-20">
                     <h1 className="text-5xl font-semibold text-white">{modInfo.name}</h1>
-                    <div className="pr-40">
+                    <div className="pr-10">
                         {children}
                     </div>
                 </section>
