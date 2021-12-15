@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
@@ -15,6 +16,12 @@ const texturer = '/images/studio/texturer.png'
 const animator = '/images/studio/animator.png'
 
 const HomePage = () => {
+
+  const router = useRouter();
+  const goToStudio = (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+      router.push("/studio");
+  }
 
   return (
     <div className="overflow-x-hidden">
@@ -39,7 +46,7 @@ const HomePage = () => {
               <h1 className="text-6xl font-semibold">DumbCode Studio</h1>
             </div>
             <p className="font-semibold text-md text-neutral-500 ml-1">A full featured game asset creation tool.</p>
-            <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-12 rounded-md">View More</button>
+            <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-12 rounded-md" onClick={goToStudio}>View More</button>
           </div>
           <div className="relative left-40 place-self-center translate-x-full hidden 2xl:block">
             <div className="text-center group rounded-md aspect-video w-96 translate-y-1/2 -translate-x-8 -rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${project})` }}>
@@ -67,9 +74,9 @@ const HomePage = () => {
           </div>
 
           <div className="md:flex flex-row 2xl:mx-40 mx-4">
-            <ModCard title="DumbLibrary" img={ dumb_library } desc="A Minecraft modding library made for DumbCode mods. It builds off of the library: LLibrary (See Below), and includes animation among other useful tools."/>
-            <ModCard title="Project: Nublar" img={ project_nublar } desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game."/>
-            <ModCard title="Gradlehook" img={ gradlehook } desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data"/>
+            <ModCard title="DumbLibrary" route="/mods/dumblibrary" img={ dumb_library } desc="A Minecraft modding library made for DumbCode mods. It builds off of the library: LLibrary (See Below), and includes animation among other useful tools."/>
+            <ModCard title="Project: Nublar" route="/mods/projectnublar" img={ project_nublar } desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game."/>
+            <ModCard title="Gradlehook" route="/mods/gradlehook" img={ gradlehook } desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data"/>
           </div>
         </section>
 
@@ -88,13 +95,20 @@ const HomePage = () => {
   );
 }
 
-const ModCard = ({ title, desc, img }: { title: string, desc: string, img:string}) => {
+const ModCard = ({ title, route, desc, img }: { title: string, route: string, desc: string, img: string }) => {
+
+  const router = useRouter();
+  const handleClick = (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+      router.push(route);
+  }
+
   return (
     <div className="hover:scale-105 flex-grow bg-neutral-800 mx-4 rounded-md lg:w-1/3 w-full text-center transition-transform my-5">
       <div className="aspect-video rounded-t-md bg-center bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
       <h1 className="text-4xl text-center my-6">{title}</h1>
       <p className="text-xs xl:px-20 px-4 md:px-6">{desc}</p>
-      <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 mb-4 rounded-md">View More</button>
+      <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 mb-4 rounded-md" onClick={handleClick}>View More</button>
     </div>
   );
 }

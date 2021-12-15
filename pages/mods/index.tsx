@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
@@ -18,16 +19,23 @@ const ModsPage = () => {
                 </div>
             </section>
 
-            <ModSection rotation="xl:rotate-3" title="Project: Nublar" img={project_nublar} desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game." />
-            <ModSection rotation="xl:-rotate-3" title="DumbLibrary" img={dumb_library} desc="A Minecraft modding library made for DumbCode mods. It includes animation, ECS, and other useful tools for creating mineraft mods." />
-            <ModSection rotation="xl:rotate-3" title="Gradlehook" img={gradlehook} desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data" />
+            <ModSection rotation="xl:rotate-3" title="Project: Nublar" route="/mods/projectnublar" img={project_nublar} desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game." />
+            <ModSection rotation="xl:-rotate-3" title="DumbLibrary" route="/mods/dumblibrary" img={dumb_library} desc="A Minecraft modding library made for DumbCode mods. It includes animation, ECS, and other useful tools for creating mineraft mods." />
+            <ModSection rotation="xl:rotate-3" title="Gradlehook" route="/mods/gradlehook" img={gradlehook} desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data" />
 
             <Footer />
         </div>
     );
 }
 
-const ModSection = ({ title, desc, img, rotation }: { title: string, desc: string, img: string, rotation: string }) => {
+const ModSection = ({ title, desc, route, img, rotation }: { title: string, desc: string, route: string, img: string, rotation: string }) => {
+
+    const router = useRouter();
+    const handleClick = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        router.push(route);
+    }
+
     return (
         <section className="w-screen bg-neutral-800 flex lg:flex-row flex-col-reverse md:px-10 2xl:px-40">
             <div className="md:rounded-b-md lg:rounded-t-md w-full lg:w-1/3 bg-neutral-900 transition-transform xl:mx-10 p-5 flex flex-col lg:m-10">
@@ -36,7 +44,7 @@ const ModSection = ({ title, desc, img, rotation }: { title: string, desc: strin
                 <div className="relative flex-grow hidden xl:block">
                     <div className="relative w-full bg-blue-500 h-2 right-0 translate-x-full rounded-full"></div>
                 </div>
-                <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 rounded-md">View More</button>
+                <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 rounded-md" onClick={handleClick}>View More</button>
             </div>
             <div className={"shadow-lg w-full lg:w-2/3 aspect-video lg:hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:m-10 " + rotation}>
                 <div className="aspect-video md:rounded-t-md lg:rounded-b-md bg-left bg-cover" style={{ backgroundImage: `url(${img})` }}></div>

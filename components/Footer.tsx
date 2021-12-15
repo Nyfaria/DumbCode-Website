@@ -24,14 +24,14 @@ const Footer = () => {
           </div>
           <div className="text-neutral-700 text-xs">
             <p className="my-0">Mods</p>
-            <div className="text-blue-500"><Link href="/mod/projectnublar">Project: Nublar</Link></div><br />
-            <div className="text-blue-500"><Link href="/mod/dumblibrary">Dumb Library</Link></div><br />
+            <div className="text-blue-500"><Link href="/mods/projectnublar">Project: Nublar</Link></div>
+            <div className="text-blue-500"><Link href="/mods/dumblibrary">Dumb Library</Link></div>
           </div>
           <br />
           <div className="text-neutral-700 text-xs">
             <p className="my-0">Tools</p>
-            <div className="text-blue-500"><Link href="/studio">Dumbcode Studio</Link></div><br />
-            <div className="text-blue-500"><Link href="/mod/gradlehook">Gradlehook</Link></div><br />
+            <div className="text-blue-500"><Link href="/studio">Dumbcode Studio</Link></div>
+            <div className="text-blue-500"><Link href="/mods/gradlehook">Gradlehook</Link></div>
           </div>
         </div>
         <div className="mx-4 w-1/3">
