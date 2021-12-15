@@ -6,7 +6,6 @@ import ModInfoSidebar from "../../components/ModInfoSidebar";
 import Navbar from "../../components/Navbar";
 import { additionalTasks, fields, legacyPluginApplication, messageFirstOption, pluginDSL, simplePlugin } from "../../data/gradlehookexamples";
 import { gradleHookInfo } from "../../data/modData";
-import { gradleHookContributors } from "../../data/team";
 
 const GradleHookPage = () => {
     return (
@@ -14,7 +13,7 @@ const GradleHookPage = () => {
             <Header pageName="GradleHook Mod" />
             <Navbar />
             <div className="flex flex-col md:flex-row-reverse px-10 lg:px-32 2xl:px-60">
-                <ModInfoSidebar members={gradleHookContributors} modInfo={ gradleHookInfo } />
+                <ModInfoSidebar modInfo={ gradleHookInfo } />
                 <section className="w-screen bg-neutral-800 pt-10 overflow-hidden pr-20 2xl:pr-20">
                     <h1 className="text-5xl font-semibold text-white">GradleHook</h1>
 
