@@ -46,12 +46,12 @@ const StudioPage = () => {
                         <div className="text-white mt-10 text-xs w-60 text-justify">
                             The DumbCode Studio was created originally as a tool to animate minecraft style models made with Tabula for a minecraft mod called Project: Nublar
                             in 2019 by WynPrice for the DumbCode team. Since then the tool has become a full featured asset creation tool. Your Modelers, Texturers, Animators
-                            and project managers all live in the same happy place that we've created for them.
+                            and project managers all live in the same happy place that we&lsquo;ve created for them.
                             <br /><br />
-                            Further reading on this page will go over all of the features of each of our app's views, but we think you'll be excited to see what we've been
+                            Further reading on this page will go over all of the features of each of our app&lsquo;s views, but we think you&lsquo;ll be excited to see what we&lsquo;ve been
                             working on for these many years.
                             <br /><br />
-                            We believe that the design decisions we've made by using and taking notes from the small number of tools avalible in our market will make this
+                            We believe that the design decisions we&lsquo;ve made by using and taking notes from the small number of tools avalible in our market will make this
                             piece of software as special to your team as it has been to ours.
                         </div>
                         <div className="flex-grow pl-10">
@@ -67,7 +67,7 @@ const StudioPage = () => {
                             <div className="w-[200px] md:w-[300px] lg:w-[300px] p-4 md:p-10 text-center text-white aspect-video -translate-x-10 bg-neutral-700 rounded-md absolute lg:-translate-x-10 2xl:translate-x-20 right-0 -translate-y-40 md:translate-y-48 lg:translate-y-96 bg-center bg-cover">
                                 <p className="text-xs underline font-semibold">PROJECT IMAGE CREDITS</p>
                                 <p className="font-semibold">PROJECT: NUBLAR</p>
-                                <p className="font-semibold">GALAXIES: Parzi's Star Wars Mod</p>
+                                <p className="font-semibold">GALAXIES: Parzi&lsquo;s Star Wars Mod</p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ const StudioPage = () => {
                     <p className="font-semibold text-md ml-1 text-neutral-400 mt-2">And just a little bit more.</p>
                 </div>
                 <div className="absolute right-0 -translate-y-80 -translate-x-40 hidden 2xl:block">
-                    <Image src={worrt} width={300} height={300} />
+                    <Image alt="worrt" src={worrt} width={300} height={300} />
                 </div>
                 <AboutViewSection
                     title="Your New Favorite Modeler"

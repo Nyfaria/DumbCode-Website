@@ -70,7 +70,7 @@ const HomePage = () => {
         <section className="xl:h-screen w-screen bg-neutral-900 pt-10 overflow-hidden">
           <div className="text-center lg:text-left my-10 lg:translate-x-44 w-full">
             <h1 className="text-6xl font-semibold">DumbCode Mods</h1>
-            <p className="font-semibold text-md text-neutral-500 ml-1">The cool stuff we've made for players and modders.</p>
+            <p className="font-semibold text-md text-neutral-500 ml-1">The cool stuff we&lsquo;ve made for players and modders.</p>
           </div>
 
           <div className="md:flex flex-row 2xl:mx-40 mx-4">

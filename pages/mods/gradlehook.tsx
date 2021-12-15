@@ -14,12 +14,12 @@ const GradleHookPage = () => {
 
             <section className="mt-10">
                 <h1 className="text-3xl text-white">Applying the Plugin</h1>
-                <p className="text-neutral-500">Using the <a target="_blank" href="https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block" className="cursor-pointer underline">plugin DSL</a>:</p>
+                <p className="text-neutral-500">Using the <a target="_blank" rel="noreferrer" href="https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block" className="cursor-pointer underline">plugin DSL</a>:</p>
                 <CodeHilight language="javascript" code={pluginDSL} />
             </section>
 
             <section className="mt-5">
-                <p className="text-neutral-500">Using the <a target="_blank" href="https://docs.gradle.org/current/userguide/plugins.html#sec:old_plugin_application" className="cursor-pointer underline">legacy plugin application</a>:</p>
+                <p className="text-neutral-500">Using the <a target="_blank" rel="noreferrer" href="https://docs.gradle.org/current/userguide/plugins.html#sec:old_plugin_application" className="cursor-pointer underline">legacy plugin application</a>:</p>
                 <CodeHilight language="javascript" code={legacyPluginApplication} />
             </section>
 
@@ -57,7 +57,7 @@ const GradleHookPage = () => {
 
             <section className="mt-10">
                 <h1 className="text-3xl text-white">Message First Option</h1>
-                <p className="text-neutral-500">In some senarios, you want the text message to sent as a seperate webhook before the build webhooks. The following would mean a webhook with the field "id" would be sent, then once an HTTP_OK response code is sent, the artifacts are sent over in a webhook.</p>
+                <p className="text-neutral-500">In some senarios, you want the text message to sent as a seperate webhook before the build webhooks. The following would mean a webhook with the field &quot;id&quot; would be sent, then once an HTTP_OK response code is sent, the artifacts are sent over in a webhook.</p>
                 <NoteTag note="The urlToken should be private." />
                 <CodeHilight language="javascript" code={messageFirstOption} />
             </section>

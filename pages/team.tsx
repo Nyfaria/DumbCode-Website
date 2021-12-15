@@ -146,7 +146,7 @@ const SocialIcon = ({ platform, route, primary }: { platform: string, route: str
         );
     } else { 
         return (
-            <a target="_blank" href={route} className="pl-1 pt-1 hover:bg-neutral-700 h-8 w-8 rounded-full font-semibold transition-all mx-1 hover:scale-110 border border-white">
+            <a target="_blank" rel="noreferrer" href={route} className="pl-1 pt-1 hover:bg-neutral-700 h-8 w-8 rounded-full font-semibold transition-all mx-1 hover:scale-110 border border-white">
                 {icon}
             </a>
         );

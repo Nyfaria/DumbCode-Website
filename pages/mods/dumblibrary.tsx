@@ -13,9 +13,9 @@ const DumbLibraryPage = () => {
 
                 <section className="mt-10">
                     <h1 className="text-3xl text-white">Documentation</h1>
-                    <a target="_blank" href="https://github.com/Dumb-Code/DumbLibrary/wiki/Entity-Component-System" className="underline text-neutral-500">Entity Component System</a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/Dumb-Code/DumbLibrary/wiki/Entity-Component-System" className="underline text-neutral-500">Entity Component System</a>
                     <br />
-                    <a target="_blank" href="https://github.com/Dumb-Code/DumbLibrary/wiki/Animation-API" className="underline text-neutral-500">Animation System</a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/Dumb-Code/DumbLibrary/wiki/Animation-API" className="underline text-neutral-500">Animation System</a>
                 </section>
 
                 <section className="mt-10">
@@ -25,7 +25,7 @@ const DumbLibraryPage = () => {
 
                 <section className="mt-10">
                     <h1 className="text-3xl text-white">Acknowledgments</h1>
-                    <a target="_blank" href="https://minecraft.curseforge.com/projects/llibrary" className="underline text-neutral-500">Llibrary</a>
+                    <a target="_blank" rel="noreferrer" href="https://minecraft.curseforge.com/projects/llibrary" className="underline text-neutral-500">Llibrary</a>
                 </section>
             </div>
 

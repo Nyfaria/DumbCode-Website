@@ -29,7 +29,7 @@ const DumbLibraryPage = () => {
 
             <section className="mt-10">
                 <h1 className="text-3xl text-white">Requirements</h1>
-                <div className="text-neutral-500">Project Nublar Requires DumbLibary, which can be found on it's mod page <div className="underline inline-block"><Link href="/mods/dumblibrary" >here</Link></div>.</div>
+                <div className="text-neutral-500">Project Nublar Requires DumbLibary, which can be found on it&lsquo;s mod page <div className="underline inline-block"><Link href="/mods/dumblibrary" >here</Link></div>.</div>
             </section>
 
             <section className="mt-10">

@@ -71,7 +71,7 @@ const NavbarBrandButton = () => {
         <div className="bg-neutral-900 px-4 text-white text-xs capitalize hover:bg-neutral-700 h-full font-semibold flex flex-row cursor-pointer"
             onClick={takeHome}>
             <div className="mt-4 mr-2 h-6 w-6 relative">
-                <Image src={logo} layout="fill" />
+                <Image alt="logo" src={logo} layout="fill" />
             </div>
             <p className="pt-5">DUMBCODE</p>
         </div>
@@ -120,7 +120,7 @@ const NavbarButton = ({ name, route }: { name: string, route: string }) => {
 const NavbarIconButton = ({ icon, route }: { icon: JSX.Element, route: string }) => {
 
     return (
-        <a target="_blank" href={route} className="bg-neutral-900 pl-1 pt-1 text-white text-xs capitalize hover:bg-neutral-700 h-8 w-8 rounded-full font-semibold transition-all mx-1 hover:scale-110">
+        <a target="_blank" rel="noreferrer" href={route} className="bg-neutral-900 pl-1 pt-1 text-white text-xs capitalize hover:bg-neutral-700 h-8 w-8 rounded-full font-semibold transition-all mx-1 hover:scale-110">
             {icon}
         </a>
     );
