@@ -38,7 +38,7 @@ const ModSection = ({ title, desc, img, rotation }: { title: string, desc: strin
                 </div>
                 <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 rounded-md">View More</button>
             </div>
-            <div className={"shadow-lg w-full lg:w-2/3 aspect-video hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:m-10 " + rotation}>
+            <div className={"shadow-lg w-full lg:w-2/3 aspect-video lg:hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:m-10 " + rotation}>
                 <div className="aspect-video md:rounded-t-md lg:rounded-b-md bg-left bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
             </div>
         </section>

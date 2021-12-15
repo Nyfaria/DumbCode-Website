@@ -74,7 +74,7 @@ const StudioPage = () => {
                 </div>
             </div>
 
-            <section className="hidden lg:block w-screen h-[20vh] 2xl:h-[80vh] bg-opacity-60 2xl:bg-opacity-100 bg-neutral-900"></section>
+            <section className="hidden lg:block w-screen h-[20vh] 2xl:h-[80vh] bg-opacity-60 2xl:bg-opacity-100 bg-neutral-900 2xl:bg-neutral-800"></section>
 
             <section className="w-screen bg-cover bg-center bg-neutral-900 bg-opacity-60">
                 <div className="py-10 h-full text-white px-14 lg:px-80">
