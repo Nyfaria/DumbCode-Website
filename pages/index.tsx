@@ -30,8 +30,8 @@ const HomePage = () => {
       <div className="bg-neutral-800 text-white">
 
         <section className="w-screen h-screen bg-cover bg-center" style={{ backgroundImage: `url(${banner})` }}>
-          <div className="translate-y-1/3 h-full translate-x-44">
-            <div className="flex flex-row">
+          <div className="translate-y-1/3 h-full text-center md:text-left md:translate-x-44">
+            <div className="flex flex-row justify-center md:justify-start">
               <h1 className="text-6xl font-semibold">DumbCode</h1>
               <div className="h-2 w-8 bg-white mt-12 ml-3 bottom-0 animate-pulse"></div>
             </div>
@@ -73,7 +73,7 @@ const HomePage = () => {
             <p className="font-semibold text-md text-neutral-500 ml-1">The cool stuff we&lsquo;ve made for players and modders.</p>
           </div>
 
-          <div className="md:flex flex-row 2xl:mx-40 mx-4">
+          <div className="md:flex flex-row 2xl:mx-40 mx-4 pr-8">
             <ModCard title="DumbLibrary" route="/mods/dumblibrary" img={ dumb_library } desc="A Minecraft modding library made for DumbCode mods. It builds off of the library: LLibrary (See Below), and includes animation among other useful tools."/>
             <ModCard title="Project: Nublar" route="/mods/projectnublar" img={ project_nublar } desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game."/>
             <ModCard title="Gradlehook" route="/mods/gradlehook" img={ gradlehook } desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data"/>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import smoothscroll from 'smoothscroll-polyfill';
 
 const members = ["bastion", "bizarrealtispinax", "brotat", "brownboiwonder", "chucho", "cody", "dom", "floofhips", "gegy", "harvey", "hyperion", "igrek", "lustria", "mazikeen", "neusfear", "ninni", "niruny", "raptorek", "raptorwhisper", "sindavar", "snow", "wolfgank", "wynprice", "xav", "zenthic"];
 
@@ -13,6 +14,7 @@ const TeamCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (inputElement.current !== null) {
+        smoothscroll.polyfill();
         //If we've almost made it to the end of the list then go back to the previous half that matches the current position
         //100 px buffer so that it doesn't stick at the end
         if (inputElement.current.scrollLeft >= inputElement.current.scrollWidth - window.innerWidth - 100) {
@@ -44,5 +46,19 @@ const TeamBubble = ({ member }: { member: string }) => {
     </div>
   );
 }
+
+/*
+const TeamBubble2 = ({ member }: { member: string }) => {
+
+  const memberData = allMembers.find(element => element.name.toLowerCase() === member.toLowerCase())
+
+  return (
+    <div className="w-32 overflow-hidden m-4 hover:scale-105 transition-trans" onScroll={() => { }}>
+      <div className="aspect-square rounded-full bg-center bg-cover" style={{ backgroundImage: `url("/images/people/${memberData?.imageName}")` }}></div>
+      <p className="text-center">{memberData?.name}</p>
+    </div>
+  );
+}
+*/
 
 export default TeamCarousel;
