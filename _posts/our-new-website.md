@@ -10,10 +10,30 @@ ogImage:
   url: '/blog/new-website/cover.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+DumbCode is proud to announce that our central medium of information has been given a face-lift. We believe that the first impression of a user is important, and that we need a nice friendly place for those new uers to land and be inrigued by what we have to offer. So welcome to our new and improved dumbcode.net!
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+## What's New
 
-## Lorem Ipsum
+The New DumbCode website bings a lot of new features and technology in addition to the new look. Firstly this Blog page is new to the DumbCode website and we will be using it as a more professional and article based medium for bringing news to our community. We will still continue to post announcements on our Discord and Twitter channels in addition to this site, and more often than here.
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+The new DumbCode Studio Landing page! Next up on the list of new things is the DumbCode Studio page that gives an outline of the features that it brings. This main reason for this new page is to get ready for it's release! Another blog post will come soon outlining our plans and progress for the studio, so stay tuned! In fact, the main reason for this site's facelift is because we are approaching the release of multiple things, and want to have a home for all of these items.
+
+The whole site other than that has the same features, and some may look similar, but have all been re-programmed with a ton of new technologies and better code standards. I'll go over all of the technical details in a later section of this article, but the gist of the advantages are speed, and versatility.
+
+## Our Plans for the Future
+
+With the technological improvements of the website means that we will be able to more easily update and improve as our community grows and develops. With the launch of the DumbCode Studio we would like to start hosting competitions for renderings to fill the home page and studio promotional material in addition to our own Project: Nublar promotions. On example is with Galaxies: Parzi's Star Wars Mod. You can see some little hints of their art on the Studio Page already!
+
+## Other Announcements to Come
+
+DumbCode has been up to much more than the new Website and we're hoping to have things to show for it very soon. As mentioned many times before in this article the DumbCode studio has been reprogrammed from the ground up over the past year and the 1.0 release is looking to be feature packed and happening before you know it! Additionally we've done a lot of things to get the Project: Nublar beta ready for release, mainly in the gameplay loop. Most of the process for creating dinosaurs has been implemented and all that's left is polishing that off and finishing the planned dinosaurs for the first beta release! Most assets have undergone their final model and texture patch-ups and just need the rest of the animations completed. We're hoping that once the animator v3 in the DumbCode Studio is complete, creating these animations will be finally more fun than it is complicated like now. That being said, if you or a friend have experience animating minecraft style models and want to help us out please reach out to BrownBoiWonder or Hyper on our discord to possibly be able to help us reach our goal of a sooner rather than later release!
+
+I am hoping that before the end of the year, or around New Years DumbCode will have another blog post outlining all of the news happening behind the scenes in a sort of "State of DumbCode" blog post. Stay tuned for that in the near future!
+
+## The Tecnical Stuff
+
+For most people reading this you may skip this section as it's more for the developers in our community. The new website and DumbCode Studio have been reprogrammed from the ground up using modern technology and no dirty runtime stitching hacks as they were before. Our website now uses React with Next.js for our frontend and static site generation! In combination with Tailwindcss and the use of TypeScript we are able to create more complicated interfaces way easier than ever before. These changes make the experience faster as the pages are built statically instead of stitched together on the user's browser like before. This brings down load times and page reload times immensley. In addition to that we are now hosting our website on Vercel, a much more robust and avalible 
+
+## Conclusion
+
+Thanks for reading our first ever blog post! We hope to have many more in the future. As a Final note, this website is still new and generally untested in a broad user-base so if you find something that seems weird please report it! We are always wanting to improve our user experience, and issue reports are the best way to track those things we can improve on.

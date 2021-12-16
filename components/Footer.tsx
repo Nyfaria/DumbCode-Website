@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SvgPoweredByVercel } from './Icons';
 
 const Footer = () => {
   return (
@@ -36,10 +37,11 @@ const Footer = () => {
         </div>
         <div className="mx-4 w-full col-span-2">
           <div className="text-neutral-700 text-xs">
-            <h1 className="text-3xl">Disclaimer and Legalities</h1>
+            <h1 className="text-3xl">Other Stuff</h1>
             <p>DumbCode is in no way affiliated with Minecraft or its owners Mojang Studios.Our content licenses are placed under their corresponding code repositories and should be treated as true pieces of software.</p>
+            <div className="text-neutral-700 text-xs mt-2 mb-10">DumbCode Website updated 2021.</div>
+            <SvgPoweredByVercel />
           </div>
-          <div className="text-neutral-700 text-xs">DumbCode Website updated 2021.</div>
         </div>
       </div>
     </footer>

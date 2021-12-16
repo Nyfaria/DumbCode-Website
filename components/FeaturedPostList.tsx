@@ -8,9 +8,7 @@ export default function FeaturedPostList({ posts }: { posts: PostType[] }) {
   return (
     <section className="pb-10">
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {posts.map((post, index) => (
-          <PostPreview key={index} post={post} />
-        ))}
+        {posts.length > 0 ? <PostList posts={posts} /> : <NothingToSeeHere />}
       </div>
     </section>
   )
@@ -63,4 +61,23 @@ const CoverImage = ({ title, src, slug }: { title: string, src: string, slug: st
       {slug ? <Link as={`/blog/${slug}`} href="/blog/[slug]"><a aria-label={title}>{image}</a></Link> : image}
     </div>
   )
+}
+
+const PostList = ({ posts }: { posts: PostType[] }) => {
+  return (
+    <>
+      {posts.map((post, index) => (
+        <PostPreview key={index} post={post} />
+      ))}
+    </>
+  );
+}
+
+const NothingToSeeHere = () => {
+  return (
+    <div className="bg-neutral-700 p-4 rounded-md text-white text-2xl">
+      <h1 className="text-6xl mb-10 ml-10 font-bold">:(</h1>
+      <p className="px-5">No featured posts yet, check back soon for more.</p>
+    </div>
+  );
 }

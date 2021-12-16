@@ -30,7 +30,7 @@ export default function Index({ allPosts }: { allPosts: PostType[] }) {
             <h1 className="text-6xl font-semibold">Other Posts</h1>
             <p className="font-semibold text-md text-neutral-500 ml-1">See Updates on what we&apos;ve got cooking.</p>
           </div>
-          {morePosts.length > 0 && <FeaturedPostList posts={morePosts} />}
+          <FeaturedPostList posts={morePosts} />
         </Container>
       </section>
       <Footer />
