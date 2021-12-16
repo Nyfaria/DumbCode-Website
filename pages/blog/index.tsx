@@ -15,10 +15,10 @@ export default function Index({ allPosts }: { allPosts: PostType[] }) {
   const morePosts = allPosts.slice(1)
 
   return (
-    <div className="overflow-x-hidden bg-neutral-800">
+    <div className="overflow-x-hidden bg-neutral-800 relative">
       <Header pageName="Blog" />
       <Navbar />
-      <div className="text-center lg:text-left ml-40 m-10 py-4 px-20 text-white absolute bg-blue-500 bg-opacity-80 rounded-md">
+      <div className="text-center lg:text-left md:ml-40 m-10 py-4 px-20 text-white absolute bg-blue-500 bg-opacity-80 rounded-md">
         <h1 className="text-6xl font-semibold">Latest Post</h1>
         <p className="font-semibold text-md text-neutral-300 ml-1">What&apos;s new with DumbCode.</p>
       </div>
@@ -55,7 +55,7 @@ const HeroPost = ({ post }: { post: PostType }) => {
         />
       </div>
       <Container>
-        <div className="text-white grid grid-flow-row grid-cols-2">
+        <div className="text-white md:grid grid-flow-row grid-cols-2">
           <div className="bg-neutral-900 p-4 pl-10 rounded-md -translate-y-20">
             <h3 className="mb-4 text-4xl lg:text-6xl leading-tight font-bold">
               {post.title}
