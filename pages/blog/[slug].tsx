@@ -1,8 +1,8 @@
 import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
 import Container from '../../components/blog/container'
-import DateFormatter from '../../components/blog/dateformatter'
-import MoreStories from '../../components/blog/morestories'
+import DateFormatter from '../../components/DateFormatter'
+import FeaturedPostList from '../../components/FeaturedPostList'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
@@ -59,7 +59,7 @@ const ReccomendedPosts = ({ posts }: { posts: PostType[] }) => {
           <h1 className="text-6xl font-semibold">Read More</h1>
           <p className="font-semibold text-md text-neutral-500 ml-1">See what else DumbCode has to read about.</p>
         </div>
-        <MoreStories posts={posts} />
+        <FeaturedPostList posts={posts} />
       </Container>
     </div>
   );
