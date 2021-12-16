@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import smoothscroll from 'smoothscroll-polyfill';
 
 const members = ["bastion", "bizarrealtispinax", "brotat", "brownboiwonder", "chucho", "cody", "dom", "floofhips", "gegy", "harvey", "hyperion", "igrek", "lustria", "mazikeen", "neusfear", "ninni", "niruny", "raptorek", "raptorwhisper", "sindavar", "snow", "wolfgank", "wynprice", "xav", "zenthic"];
 
@@ -10,28 +9,25 @@ const TeamCarousel = () => {
   //Duplicate the list so that it is easy to loop
   randomMembers = randomMembers.concat(randomMembers);
 
-  const inputElement = useRef<HTMLDivElement>(null)
+  const divRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (inputElement.current !== null) {
-        smoothscroll.polyfill();
-        //If we've almost made it to the end of the list then go back to the previous half that matches the current position
-        //100 px buffer so that it doesn't stick at the end
-        if (inputElement.current.scrollLeft >= inputElement.current.scrollWidth - window.innerWidth - 100) {
-          //Basically just set the position to the current pos but make sure to account for the extra distance moved (and use 99 instead of 100 for offset)
-          inputElement.current.scrollLeft = (inputElement.current.scrollWidth / 2) - window.innerWidth - 99 + (inputElement.current.scrollLeft - (inputElement.current.scrollWidth - window.innerWidth - 100));
-        }
-        //Scroll the elements a bit every 128 ms
-        inputElement.current.scrollBy({ left: 32, behavior: 'smooth' })
+    let frame: number
+    const callback = (time: DOMHighResTimeStamp) => {
+      frame = requestAnimationFrame(callback)
+      if (divRef.current !== null) {
+        const speed = 0.1
+        divRef.current.scrollLeft = (time * speed) % (divRef.current.scrollWidth / 2)
       }
-    }, 128)
+    }
+    frame = requestAnimationFrame(callback)
+
     return () => {
-      clearInterval(interval)
+      cancelAnimationFrame(frame)
     }
   }, [])
 
   return (
-    <div ref={inputElement} className="w-screen grid grid-flow-col overflow-x-hidden">
+    <div ref={divRef} className="w-screen grid grid-flow-col overflow-x-hidden">
       {randomMembers.map((member, key) => <TeamBubble key={key} member={member} />)}
     </div>
   );
