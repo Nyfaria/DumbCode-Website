@@ -28,7 +28,7 @@ export default function HeroPost({ post }: { post: PostType }) {
               {post.title}
             </h3>
             <div className="w-full">
-              <button className="bg-blue-500 text-white py-2 px-10 rounded-md absolute right-0 mr-10">Read More</button>
+              <button className="bg-blue-500 text-white py-2 px-10 rounded-md absolute right-0 mr-10" onClick={goToPost}>Read More</button>
             </div>
           </div>
           <div className="bg-neutral-700 p-4 rounded-md m-4">

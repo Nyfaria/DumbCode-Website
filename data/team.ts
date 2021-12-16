@@ -29,6 +29,16 @@ export const primaryMembers: PrimaryMemberType[] = [
             { "platform": "github", "link": "https://github.com/Brotatsun64" },
             { "platform": "youtube", "link": "https://www.youtube.com/channel/UCGfffU8rEX43SmACBAFjUsQ" }
         ]
+    },
+    {
+        "name": "Mazikeen",
+        "imageName": "mazikeen.png",
+        "bio": "Mazikeen is one of the team's main texture artists, along with various asset contributions for the mod, Mazikeen is also part of the build team that is responsible for the asset showcases along with any in game builds related to the Project Nublar Mod",
+        "roles": ["texture_artist"],
+        "socials": [
+            { "platform": "discord", "link": "Mazikeen#7846" },
+            { "platform": "twitter", "link": "https://twitter.com/Mazikeen143" },
+        ]
     }
 ]
 
