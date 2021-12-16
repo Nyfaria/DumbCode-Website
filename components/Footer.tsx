@@ -40,7 +40,7 @@ const Footer = () => {
             <h1 className="text-3xl">Other Stuff</h1>
             <p>DumbCode is in no way affiliated with Minecraft or its owners Mojang Studios.Our content licenses are placed under their corresponding code repositories and should be treated as true pieces of software.</p>
             <div className="text-neutral-700 text-xs mt-2 mb-10">DumbCode Website updated 2021.</div>
-            <SvgPoweredByVercel />
+            <a href="https://vercel.com/?utm_source=dumbcode&utm_campaign=oss"><SvgPoweredByVercel /></a>
           </div>
         </div>
       </div>
