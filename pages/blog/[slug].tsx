@@ -1,6 +1,7 @@
 import ErrorPage from 'next/error'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import BackgroundImage from '../../components/BackgroundImage'
 import Container from '../../components/Container'
 import DateFormatter from '../../components/DateFormatter'
 import FeaturedPostList from '../../components/FeaturedPostList'
@@ -32,7 +33,9 @@ export default function Post({ post, morePosts }: { post: PostType, morePosts: P
         </h1>
       ) : (
         <div className="bg-neutral-800">
-          <div className="bg-cover bg-center h-[80vh] w-screen" style={{ backgroundImage: `url("${post.coverImage}")` }}></div>
+          <div className="bg-cover bg-center h-[80vh] w-screen">
+            <BackgroundImage src={post.coverImage} width={1920} height={1080} />
+          </div>
           <article className="">
             <div className="max-w-4xl px-4 md:px-20 pb-10 mx-auto bg-neutral-200 -translate-y-20 rounded-lg">
               <h1 className="text-neutral-900 text-6xl md:text-7xl pt-6 lg:text-6xl font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center md:text-left">

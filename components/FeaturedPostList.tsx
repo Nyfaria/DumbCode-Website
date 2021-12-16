@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { PostType } from '../lib/blogapi'
+import BackgroundImage from './BackgroundImage'
 import DateFormatter from './DateFormatter'
 
 export default function FeaturedPostList({ posts }: { posts: PostType[] }) {
@@ -52,7 +53,9 @@ const Avatar = ({ name, picture }: { name: string, picture: string }) => {
 const CoverImage = ({ title, src, slug }: { title: string, src: string, slug: string | undefined }) => {
 
   const image = (
-    <div className="bg-cover bg-center aspect-video w-full rounded-t-md" style={{ backgroundImage: `url("${src}")` }}></div>
+    <div className="bg-cover bg-center aspect-video w-full rounded-t-md">
+      <BackgroundImage className="rounded-t-md" src={src} width={640} height={360} />
+    </div>
   )
 
   return (

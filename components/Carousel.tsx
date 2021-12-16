@@ -1,4 +1,5 @@
 import { Key, useEffect, useState } from "react";
+import BackgroundImage from "./BackgroundImage";
 
 const Carousel = ({ images, autoAdvance }: { images: string[], autoAdvance: boolean }) => {
 
@@ -59,7 +60,9 @@ export default Carousel;
 
 export const CarouselItem = ({ img }: { img: string }) => {
     return (
-        <div className="flex-grow h-full bg-cover bg-center" style={{ backgroundImage: `url("${img}")`, width: '100%' }}></div>
+        <div className="flex-grow h-full bg-cover bg-center">
+            <BackgroundImage src={img} width={1920} height={1080} />
+        </div>
     )
 }
 

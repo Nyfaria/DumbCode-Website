@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import BackgroundImage from '../components/BackgroundImage';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
@@ -19,8 +20,8 @@ const HomePage = () => {
 
   const router = useRouter();
   const goToStudio = (e: { preventDefault: () => void; }) => {
-      e.preventDefault();
-      router.push("/studio");
+    e.preventDefault();
+    router.push("/studio");
   }
 
   return (
@@ -29,8 +30,9 @@ const HomePage = () => {
       <Navbar />
       <div className="bg-neutral-800 text-white">
 
-        <section className="w-screen h-screen bg-cover bg-center" style={{ backgroundImage: `url(${banner})` }}>
-          <div className="translate-y-1/3 h-full text-center md:text-left md:translate-x-44">
+        <section className="w-screen h-screen bg-cover bg-center">
+          <BackgroundImage src={banner} width={1920} height={1080} />
+          <div className="absolute top-0 translate-y-1/3 h-full text-center md:text-left md:translate-x-44">
             <div className="flex flex-row justify-center md:justify-start">
               <h1 className="text-6xl font-semibold">DumbCode</h1>
               <div className="h-2 w-8 bg-white mt-12 ml-3 bottom-0 animate-pulse"></div>
@@ -49,20 +51,25 @@ const HomePage = () => {
             <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-12 rounded-md" onClick={goToStudio}>View More</button>
           </div>
           <div className="relative left-40 place-self-center translate-x-full hidden 2xl:block">
-            <div className="text-center group rounded-md aspect-video w-96 translate-y-1/2 -translate-x-8 -rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${project})` }}>
-              <p className="bg-purple-500 rounded-xl w-48 rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Project Management</p>
+            <div className="text-center group rounded-md aspect-video w-96 translate-y-1/2 -translate-x-8 -rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
+              <BackgroundImage className="rounded-md" src={project} width={640} height={360} />
+              <p className="absolute top-0 bg-purple-500 rounded-xl w-48 rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Project Management</p>
             </div>
-            <div className="text-center group rounded-md aspect-video w-96 translate-y-10 -rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${modeler})` }}>
-              <p className="bg-blue-500 rounded-xl w-48 rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Modeler</p>
+            <div className="text-center group rounded-md aspect-video w-96 translate-y-10 -rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
+              <BackgroundImage className="rounded-md" src={modeler} width={640} height={360} />
+              <p className="absolute top-0 bg-blue-500 rounded-xl w-48 rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Modeler</p>
             </div>
-            <div className="text-center group rounded-md aspect-video w-96 z-10 translate-x-5 hover:scale-150 transition-transform hover:relative hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${mapper})` }}>
-              <p className="bg-teal-500 rounded-xl w-48 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 transition-transform px-2 shadow-xl">Texture Mapper</p>
+            <div className="text-center group rounded-md aspect-video w-96 z-10 translate-x-5 hover:scale-150 transition-transform hover:relative hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
+              <BackgroundImage className="rounded-md" src={mapper} width={640} height={360} />
+              <p className="absolute top-0 bg-teal-500 rounded-xl w-48 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 transition-transform px-2 shadow-xl">Texture Mapper</p>
             </div>
-            <div className="text-center group rounded-md aspect-video w-96 -translate-y-10 rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${texturer})` }}>
-              <p className="bg-green-500 rounded-xl w-48 -rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Texturer</p>
+            <div className="text-center group rounded-md aspect-video w-96 -translate-y-10 rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
+              <BackgroundImage className="rounded-md" src={texturer} width={640} height={360} />
+              <p className="absolute top-0 bg-green-500 rounded-xl w-48 -rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Texturer</p>
             </div>
-            <div className="text-center group rounded-md aspect-video w-96 -translate-y-1/2 -translate-x-8 rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover" style={{ backgroundImage: `url(${animator})` }}>
-              <p className="bg-yellow-500 rounded-xl w-48 -rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Animator</p>
+            <div className="text-center group rounded-md aspect-video w-96 -translate-y-1/2 -translate-x-8 rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
+              <BackgroundImage className="rounded-md" src={animator} width={640} height={360} />
+              <p className="absolute top-0 bg-yellow-500 rounded-xl w-48 -rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Animator</p>
             </div>
           </div>
         </section>
@@ -74,9 +81,9 @@ const HomePage = () => {
           </div>
 
           <div className="md:flex flex-row 2xl:mx-40 mx-4 pr-8">
-            <ModCard title="DumbLibrary" route="/mods/dumblibrary" img={ dumb_library } desc="A Minecraft modding library made for DumbCode mods. It builds off of the library: LLibrary (See Below), and includes animation among other useful tools."/>
-            <ModCard title="Project: Nublar" route="/mods/projectnublar" img={ project_nublar } desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game."/>
-            <ModCard title="Gradlehook" route="/mods/gradlehook" img={ gradlehook } desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data"/>
+            <ModCard title="DumbLibrary" route="/mods/dumblibrary" img={dumb_library} desc="A Minecraft modding library made for DumbCode mods. It builds off of the library: LLibrary (See Below), and includes animation among other useful tools." />
+            <ModCard title="Project: Nublar" route="/mods/projectnublar" img={project_nublar} desc="Project Nublar is a mod that adds Dinosaurs to the world of Minecraft. It aims to bring creatures canon to the Jurassic Park novel and movie franchise in the game." />
+            <ModCard title="Gradlehook" route="/mods/gradlehook" img={gradlehook} desc="Adds a postRequest gradle task which simply posts a POST request along with the specified builds. Additional fields for the request can be specified. The request uses the user agent Mozilla/5.0 and has the content-type of multipart/form-data" />
           </div>
         </section>
 
@@ -99,13 +106,15 @@ const ModCard = ({ title, route, desc, img }: { title: string, route: string, de
 
   const router = useRouter();
   const handleClick = (e: { preventDefault: () => void; }) => {
-      e.preventDefault();
-      router.push(route);
+    e.preventDefault();
+    router.push(route);
   }
 
   return (
     <div className="hover:scale-105 flex-grow bg-neutral-800 mx-4 rounded-md lg:w-1/3 w-full text-center transition-transform my-5">
-      <div className="aspect-video rounded-t-md bg-center bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
+      <div className="aspect-video rounded-t-md bg-center bg-cover">
+        <BackgroundImage className="rounded-t-md" src={img} width={640} height={360} />
+      </div>
       <h1 className="text-4xl text-center my-6">{title}</h1>
       <p className="text-xs xl:px-20 px-4 md:px-6">{desc}</p>
       <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 mb-4 rounded-md" onClick={handleClick}>View More</button>

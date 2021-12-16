@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import BackgroundImage from '../../components/BackgroundImage'
 import Container from '../../components/Container'
 import DateFormatter from '../../components/DateFormatter'
 import FeaturedPostList from '../../components/FeaturedPostList'
@@ -18,7 +19,7 @@ export default function Index({ allPosts }: { allPosts: PostType[] }) {
     <div className="overflow-x-hidden bg-neutral-800 relative">
       <Header pageName="Blog" />
       <Navbar />
-      <div className="text-center lg:text-left md:ml-40 m-10 py-4 px-20 text-white absolute bg-blue-500 bg-opacity-80 rounded-md">
+      <div className="text-center lg:text-left md:ml-40 m-10 py-4 px-20 text-white absolute bg-blue-500 bg-opacity-80 rounded-md z-10">
         <h1 className="text-6xl font-semibold">Latest Post</h1>
         <p className="font-semibold text-md text-neutral-300 ml-1">What&apos;s new with DumbCode.</p>
       </div>
@@ -89,7 +90,9 @@ const Avatar = ({ name, picture }: { name: string, picture: string }) => {
 const CoverImage = ({ title, src, slug }: { title: string, src: string, slug: string | undefined }) => {
 
   const image = (
-    <div className="bg-cover bg-center h-[80vh] w-screen" style={{ backgroundImage: `url("${src}")` }}></div>
+    <div className="bg-cover bg-center h-[80vh] w-screen">
+      <BackgroundImage src={src} width={1920} height={1080} />
+    </div>
   )
 
   return (

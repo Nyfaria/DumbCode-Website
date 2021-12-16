@@ -1,3 +1,4 @@
+import BackgroundImage from "../components/BackgroundImage";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { SvgArtstation, SvgDeviantart, SvgDiscord, SvgGithub, SvgTwitter, SvgYoutube } from "../components/Icons";
@@ -99,8 +100,8 @@ const PastMemberCard = ({ member }: { member: PastMembersType }) => {
 const MemberBubble = ({ member }: { member: string }) => {
 
     return (
-        <div className="aspect-square rounded-full bg-center bg-cover"
-            style={{ backgroundImage: `url("/images/people/${member}")` }}>
+        <div className="aspect-square rounded-full bg-center bg-cover">
+            <BackgroundImage className="rounded-full" src={`/images/people/${member}`} width={60} height={60} />
         </div>
     );
 }

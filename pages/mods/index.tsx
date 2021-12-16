@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import BackgroundImage from "../../components/BackgroundImage";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
@@ -47,7 +48,9 @@ const ModSection = ({ title, desc, route, img, rotation }: { title: string, desc
                 <button className="bg-blue-500 hover:bg-blue-600 p-2 mt-8 rounded-md" onClick={handleClick}>View More</button>
             </div>
             <div className={"shadow-lg w-full lg:w-2/3 aspect-video lg:hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:mx-2 2xl:m-10 " + rotation}>
-                <div className="aspect-video md:rounded-t-md lg:rounded-b-md bg-left bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
+                <div className="aspect-video md:rounded-t-md lg:rounded-b-md bg-left bg-cover">
+                    <BackgroundImage className="rounded-md" src={img} width={640} height={360} />
+                </div>
             </div>
         </section>
     );
