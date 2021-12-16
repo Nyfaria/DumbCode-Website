@@ -34,7 +34,7 @@ export default function Post({ post, morePosts }: { post: PostType, morePosts: P
         <div className="bg-neutral-800">
           <div className="bg-cover bg-center h-[80vh] w-screen" style={{ backgroundImage: `url("${post.coverImage}")` }}></div>
           <article className="">
-            <div className="max-w-4xl px-20 pb-10 mx-auto bg-neutral-200 -translate-y-20 rounded-lg">
+            <div className="max-w-4xl px-4 md:px-20 pb-10 mx-auto bg-neutral-200 -translate-y-20 rounded-lg">
               <h1 className="text-neutral-900 text-6xl md:text-7xl pt-6 lg:text-6xl font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center md:text-left">
                 {post.title}
               </h1>

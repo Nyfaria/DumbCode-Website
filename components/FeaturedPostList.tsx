@@ -6,7 +6,7 @@ import DateFormatter from './DateFormatter'
 export default function FeaturedPostList({ posts }: { posts: PostType[] }) {
   return (
     <section className="pb-10">
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map((post, index) => (
           <PostPreview key={index} post={post} />
         ))}
@@ -18,7 +18,7 @@ export default function FeaturedPostList({ posts }: { posts: PostType[] }) {
 const PostPreview = ({ post }: { post: PostType }) => {
 
   return (
-    <div className="mr-8 rounded-md bg-neutral-700 relative mb-4">
+    <div className="rounded-md bg-neutral-700 relative mb-4">
       <CoverImage
         slug={post.slug}
         title={post.title}
