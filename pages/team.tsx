@@ -9,7 +9,7 @@ const TeamPage = () => {
 
     return (
         <div className="overflow-x-hidden bg-neutral-800">
-            <Header pageName="Team" />
+            <Header pageName="Team" pageDesc="Meet the DumbCode Team" />
             <Navbar />
             <section className="w-screen bg-neutral-800 pt-10 overflow-hidden">
                 <div className="text-center lg:text-left my-10 lg:translate-x-44 w-full text-white">

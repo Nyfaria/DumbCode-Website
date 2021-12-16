@@ -1,5 +1,5 @@
 export type ModContributorType = { name: string, role: string }
-export type ModInfoType = { name: string, source: string, wiki: string, license: string, description: string, download: string, contributors: ModContributorType[] }
+export type ModInfoType = { name: string, source: string, wiki: string, license: string, description: string, download: string, contributors: ModContributorType[], image: string }
 
 export const projectNublarInfo: ModInfoType = {
     name: "Project Nublar",
@@ -12,7 +12,8 @@ export const projectNublarInfo: ModInfoType = {
         { name: "wynprice", role: "developer" },
         { name: "brownboiwonder", role: "modeler" },
         { name: "neusfear", role: "various"}
-    ]
+    ],
+    image: "/images/project_nublar/squad.jpg"
 }
 
 export const dumbLibraryInfo: ModInfoType = {
@@ -25,7 +26,8 @@ export const dumbLibraryInfo: ModInfoType = {
     contributors: [
         { name: "wynprice", role: "developer" },
         { name: "gegy", role: "contributor"}
-    ]
+    ],
+    image: "/images/dumb_library.bmp"
 }
 
 export const gradleHookInfo: ModInfoType = {
@@ -37,5 +39,6 @@ export const gradleHookInfo: ModInfoType = {
     download: "",
     contributors: [
         { name: "wynprice", role: "developer" }
-    ]
+    ],
+    image: "/images/gradle_hook.bmp"
 }

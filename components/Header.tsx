@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 export type OgImageType = { path: string, width: number, height: number }
 export type OgArticleType = { title: string, publisher: string, category: string, tags: string[], publishedTime: string }
 
-const Header = ({ pageName, ogImage, article }: { pageName: string, ogImage?: OgImageType, article?: OgArticleType }) => {
+const Header = ({ pageName, pageDesc, ogImage, article }: { pageName: string, pageDesc: string, ogImage?: OgImageType, article?: OgArticleType }) => {
 
     const router = useRouter()
     const path = router.pathname;
@@ -12,7 +12,7 @@ const Header = ({ pageName, ogImage, article }: { pageName: string, ogImage?: Og
     return (
         <Head>
             <title>DumbCode {pageName}</title>
-            <meta name="description" content="The home of everything DumbCode" />
+            <meta name="description" content={pageDesc} />
 
             <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -22,8 +22,8 @@ const Header = ({ pageName, ogImage, article }: { pageName: string, ogImage?: Og
             <link rel="manifest" href="/images/brand/site.webmanifest" />
 
             <meta property="og:site_name" content="DumbCode" />
-            <meta property="og:title" content={article ? article.title : pageName} />
-            <meta property="og:description" content="The home of everything DumbCode" />
+            <meta property="og:title" content={article ? article.title : "DumbCode " + pageName} />
+            <meta property="og:description" content={pageDesc} />
 
             {article || <meta property="og:type" content="website" />}
             {article && <meta property="article:publisher" content={article.publisher} />}

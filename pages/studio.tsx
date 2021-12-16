@@ -24,7 +24,7 @@ const StudioPage = () => {
 
     return (
         <div className="overflow-x-hidden bg-neutral-800">
-            <Header pageName="Studio" />
+            <Header pageName="Studio" pageDesc="Everything you need to know about the DumbCode Studio" ogImage={{"path": banner, width: 1280, height: 640}} />
             <Navbar />
 
             <section className="w-screen h-screen 2xl:h-[80vh] bg-cover bg-center">

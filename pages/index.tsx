@@ -26,7 +26,7 @@ const HomePage = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <Header pageName="Home" />
+      <Header pageName="Home" pageDesc="The Home of everything DumbCode" ogImage={{"path": banner, width: 1280, height: 640}} />
       <Navbar />
       <div className="bg-neutral-800 text-white">
 

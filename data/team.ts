@@ -120,6 +120,16 @@ export const currentMembers: CurrentMemberType[] = [
             { "platform": "twitter", "link": "https://twitter.com/rodentman87" },
             { "platform": "github", "link": "https://github.com/rodentman87" },
         ]
+    },
+    {
+        "name": "Elyasisly",
+        "imageName": "elyasisly.jpg",
+        "roles": ["sound_artist"],
+        "socials": [
+            { "platform": "discord", "link": "Elyasisly#5933" },
+            { "platform": "twitter", "link": "https://twitter.com/Ely27290042" },
+            { "platform": "github", "link": "https://github.com/Elysisy" }
+        ]
     }
 ]
 

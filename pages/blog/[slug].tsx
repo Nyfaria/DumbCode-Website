@@ -13,19 +13,20 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import markdownStyles from '../../styles/markdown-styles.module.css'
 
 export default function Post({ post, morePosts }: { post: PostType, morePosts: PostType[] }) {
-  /*
-  <Head>
-    <title>{post.title}</title>
-    <meta property="og:image" content={post.ogImage.url} />
-  </Head>
-  */
+
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
   return (
     <div className="overflow-x-hidden">
-      <Header pageName={post.title} />
+      <Header
+        pageName={post.title}
+        pageDesc="DumbCode Blog Post; Read More Here!"
+        ogImage={{ "path": post.ogImage.url, width: 1280, height: 640 }}
+        article={{ "title": post.title, "publisher": post.author.name, "category": "Gaming", "tags": ["gaming", "minecraft", "modding", "modeling", "animation", "texturing", "gamedev"], "publishedTime": post.date}}
+      />
       <Navbar />
       {router.isFallback ? (
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">

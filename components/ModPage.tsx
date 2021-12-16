@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 const ModPage = ({ modInfo, children }: { modInfo: ModInfoType, children: React.ReactNode }) => {
     return (
         <div className="h-screen overflow-x-hidden bg-neutral-800">
-            <Header pageName={modInfo.name} />
+            <Header pageName={modInfo.name} pageDesc={modInfo.description} ogImage={{"path": modInfo.image, width: 1280, height: 640}} />
             <Navbar />
             <div className="flex flex-col md:flex-row-reverse px-10 lg:px-32 2xl:px-60">
                 <ModInfoSidebar modInfo={modInfo} />

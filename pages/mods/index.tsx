@@ -11,7 +11,7 @@ const gradlehook = '/images/gradle_hook.bmp'
 const ModsPage = () => {
     return (
         <div className="overflow-x-hidden bg-neutral-800">
-            <Header pageName="Mods" />
+            <Header pageName="Mods" pageDesc="All of the DumbCode Mods" ogImage={{"path": project_nublar, width: 1280, height: 640}} />
             <Navbar />
             <section className="w-screen bg-neutral-800 pt-10 overflow-hidden">
                 <div className="text-center lg:text-left my-10 lg:translate-x-44 w-full text-white">
