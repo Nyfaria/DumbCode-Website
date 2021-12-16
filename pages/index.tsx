@@ -31,7 +31,7 @@ const HomePage = () => {
       <div className="bg-neutral-800 text-white">
 
         <section className="w-screen h-screen bg-cover bg-center">
-          <BackgroundImage alt="banner" src={banner} width={1920} height={1080} />
+          <BackgroundImage alt="banner" src={banner} />
           <div className="absolute top-0 translate-y-1/3 h-full text-center md:text-left md:translate-x-44">
             <div className="flex flex-row justify-center md:justify-start">
               <h1 className="text-6xl font-semibold">DumbCode</h1>
@@ -52,23 +52,23 @@ const HomePage = () => {
           </div>
           <div className="relative left-40 place-self-center translate-x-full hidden 2xl:block">
             <div className="text-center group rounded-md aspect-video w-96 translate-y-1/2 -translate-x-8 -rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
-              <BackgroundImage alt="project" className="rounded-md" src={project} width={640} height={360} />
+              <BackgroundImage alt="project" className="rounded-md" src={project} />
               <p className="absolute top-0 bg-purple-500 rounded-xl w-48 rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Project Management</p>
             </div>
             <div className="text-center group rounded-md aspect-video w-96 translate-y-10 -rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
-              <BackgroundImage alt="modeler" className="rounded-md" src={modeler} width={640} height={360} />
+              <BackgroundImage alt="modeler" className="rounded-md" src={modeler} />
               <p className="absolute top-0 bg-blue-500 rounded-xl w-48 rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Modeler</p>
             </div>
             <div className="text-center group rounded-md aspect-video w-96 z-10 translate-x-5 hover:scale-150 transition-transform hover:relative hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
-              <BackgroundImage alt="mapper" className="rounded-md" src={mapper} width={640} height={360} />
+              <BackgroundImage alt="mapper" className="rounded-md" src={mapper} />
               <p className="absolute top-0 bg-teal-500 rounded-xl w-48 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 transition-transform px-2 shadow-xl">Texture Mapper</p>
             </div>
             <div className="text-center group rounded-md aspect-video w-96 -translate-y-10 rotate-6 hover:scale-150 transition-transform hover:relative hover:rotate-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
-              <BackgroundImage alt="texturer" className="rounded-md" src={texturer} width={640} height={360} />
+              <BackgroundImage alt="texturer" className="rounded-md" src={texturer} />
               <p className="absolute top-0 bg-green-500 rounded-xl w-48 -rotate-6 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Texturer</p>
             </div>
             <div className="text-center group rounded-md aspect-video w-96 -translate-y-1/2 -translate-x-8 rotate-12 hover:scale-150 transition-transform hover:relative hover:rotate-0 hover:translate-x-0 shadow-md hover:shadow-2xl hover:z-50 bg-center bg-cover">
-              <BackgroundImage alt="animator" className="rounded-md" src={animator} width={640} height={360} />
+              <BackgroundImage alt="animator" className="rounded-md" src={animator} />
               <p className="absolute top-0 bg-yellow-500 rounded-xl w-48 -rotate-12 -translate-x-24 group-hover:translate-x-24 group-hover:-translate-y-4 group-hover:rotate-0 transition-transform px-2 shadow-xl">Animator</p>
             </div>
           </div>
@@ -113,7 +113,7 @@ const ModCard = ({ title, route, desc, img }: { title: string, route: string, de
   return (
     <div className="hover:scale-105 flex-grow bg-neutral-800 mx-4 rounded-md lg:w-1/3 w-full text-center transition-transform my-5">
       <div className="aspect-video rounded-t-md bg-center bg-cover">
-        <BackgroundImage alt={title} className="rounded-t-md" src={img} width={640} height={360} />
+        <BackgroundImage alt={title} className="rounded-t-md" src={img} />
       </div>
       <h1 className="text-4xl text-center my-6">{title}</h1>
       <p className="text-xs xl:px-20 px-4 md:px-6">{desc}</p>

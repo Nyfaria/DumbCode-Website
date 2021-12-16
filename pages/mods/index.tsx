@@ -49,7 +49,7 @@ const ModSection = ({ title, desc, route, img, rotation }: { title: string, desc
             </div>
             <div className={"shadow-lg w-full lg:w-2/3 aspect-video lg:hover:scale-105 transition-transform hover:rotate-0 md:rotate-0 lg:mx-2 2xl:m-10 " + rotation}>
                 <div className="aspect-video md:rounded-t-md lg:rounded-b-md bg-left bg-cover">
-                    <BackgroundImage alt={title} className="rounded-md" src={img} width={640} height={360} />
+                    <BackgroundImage alt={title} className="rounded-md" src={img} />
                 </div>
             </div>
         </section>

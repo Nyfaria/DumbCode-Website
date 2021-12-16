@@ -101,7 +101,7 @@ const MemberBubble = ({ member }: { member: string }) => {
 
     return (
         <div className="aspect-square rounded-full bg-center bg-cover">
-            <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${member}`} width={60} height={60} />
+            <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${member}`} />
         </div>
     );
 }

@@ -37,7 +37,7 @@ const TeamBubble = ({ member }: { member: string }) => {
   return (
     <div className="w-32 overflow-hidden m-4 hover:scale-105 transition-trans" onScroll={() => { }}>
       <div className="aspect-square rounded-full bg-center bg-cover">
-        <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${member}.png`} width={240} height={240} />
+        <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${member}.png`} />
       </div>
       <p className="text-center">{member}</p>
     </div>
@@ -52,7 +52,7 @@ const TeamBubble2 = ({ member }: { member: string }) => {
   return (
     <div className="w-32 overflow-hidden m-4 hover:scale-105 transition-trans" onScroll={() => { }}>
       <div className="aspect-square rounded-full bg-center bg-cover">
-        <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${memberData?.imageName}`} width={240} height={240} />
+        <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${memberData?.imageName}`} />
       </div>
       <p className="text-center">{memberData?.name}</p>
     </div>

@@ -28,7 +28,7 @@ const StudioPage = () => {
             <Navbar />
 
             <section className="w-screen h-screen 2xl:h-[80vh] bg-cover bg-center">
-                <BackgroundImage alt="banner" src={banner} width={1920} height={1080} />
+                <BackgroundImage alt="banner" src={banner} />
                 <div className="translate-y-1/3 h-full text-center text-white absolute top-0">
                     <div className="md:flex md:flex-row w-screen justify-center">
                         <h1 className="text-6xl font-semibold">DumbCode</h1>
@@ -58,13 +58,13 @@ const StudioPage = () => {
                         </div>
                         <div className="flex-grow pl-10 relative">
                             <div className="w-[300px] lg:w-[600px] aspect-video rounded-md absolute md:right-0 md:-translate-x-10 lg:hover:scale-105 transition-transform hover:z-50 bg-center bg-cover">
-                                <BackgroundImage alt="promo1" className="rounded-md" src={promo1} width={640} height={360} />
+                                <BackgroundImage alt="promo1" className="rounded-md" src={promo1} />
                             </div>
                             <div className="w-[300px] lg:w-[400px] hidden md:block aspect-video rounded-md absolute lg:translate-y-12 lg:hover:scale-110 transition-transform bg-center bg-cover">
-                                <BackgroundImage alt="promo1" className="rounded-md" src={promo2} width={640} height={360} />
+                                <BackgroundImage alt="promo1" className="rounded-md" src={promo2} />
                             </div>
                             <div className="w-[300px] lg:w-[550px] aspect-video rounded-md absolute lg:translate-x-20 translate-y-48 lg:translate-y-80 lg:hover:scale-110 transition-transform bg-center bg-cover">
-                                <BackgroundImage alt="promo1" className="rounded-md" src={promo3} width={640} height={360} />
+                                <BackgroundImage alt="promo1" className="rounded-md" src={promo3} />
                             </div>
                             <div className="hidden md:block w-[200px] md:w-[300px] lg:w-[300px] p-4 md:p-10 text-center text-white aspect-video -translate-x-10 bg-neutral-700 rounded-md absolute lg:-translate-x-10 2xl:translate-x-20 right-0 -translate-y-40 md:translate-y-48 lg:translate-y-96 bg-center bg-cover">
                                 <p className="text-xs underline font-semibold">PROJECT IMAGE CREDITS</p>
@@ -132,7 +132,7 @@ const AboutViewSection = ({ flip, title, subtitle, content, image }: { flip: boo
                 {content}
             </div>
             <div className="w-full lg:w-2/3 aspect-video bg-neutral-800 md:rounded-t-md lg:rounded-b-md mx-1 2xl:mx-10 2xl:hover:scale-105 transition-transform bg-center bg-cover">
-                <BackgroundImage alt={title} className="rounded-md" src={image} width={1920} height={1080} />
+                <BackgroundImage alt={title} className="rounded-md" src={image} />
             </div>
         </div>
     );

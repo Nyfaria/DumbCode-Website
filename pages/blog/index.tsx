@@ -91,7 +91,7 @@ const CoverImage = ({ title, src, slug }: { title: string, src: string, slug: st
 
   const image = (
     <div className="bg-cover bg-center h-[80vh] w-screen">
-      <BackgroundImage alt={title} src={src} width={1920} height={1080} />
+      <BackgroundImage alt={title} src={src} />
     </div>
   )
 

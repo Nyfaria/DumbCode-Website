@@ -52,7 +52,7 @@ const MobileNavOpenButton = ({ open, toggleOpen }: { open: boolean, toggleOpen: 
 const DesktopNavbar = () => {
 
     return (
-        <div className="bg-neutral-900 w-screen h-14 pl-10 flex flex-row">
+        <div className="bg-neutral-900 w-screen h-14 pl-10 flex flex-row z-50">
             <NavbarBrandButton />
             <NavbarItems />
         </div>
@@ -80,7 +80,7 @@ const NavbarBrandButton = () => {
 
 const NavbarItems = () => {
     return (
-        <div className="w-full lg:flex lg:flex-row lg:bg-neutral-900 bg-neutral-800">
+        <div className="w-full lg:flex lg:flex-row lg:bg-neutral-900 bg-neutral-800 relative top-0 z-50">
             <div className="lg:flex-grow">
                 <NavbarButton name="HOME" route="/" />
                 <NavbarButton name="STUDIO" route="/studio" />

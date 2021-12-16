@@ -61,7 +61,7 @@ export default Carousel;
 export const CarouselItem = ({ img }: { img: string }) => {
     return (
         <div className="flex-grow h-full bg-cover bg-center">
-            <BackgroundImage alt="carouselImage" src={img} width={1920} height={1080} />
+            <BackgroundImage alt="carouselImage" src={img} />
         </div>
     )
 }
