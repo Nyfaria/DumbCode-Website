@@ -25,7 +25,7 @@ export default function Post({ post, morePosts }: { post: PostType, morePosts: P
         pageName={post.title}
         pageDesc="DumbCode Blog Post; Read More Here!"
         ogImage={{ "path": post.ogImage.url, width: 1280, height: 640 }}
-        article={{ "title": post.title, "publisher": post.author.name, "category": "Gaming", "publishedTime": post.date}}
+        article={{ "title": post.title, "publisher": post.author.name, "category": "Gaming", "tags": ["gaming", "minecraft", "modding", "modeling", "animation", "texturing", "gamedev"], "publishedTime": post.date}}
       />
       <Navbar />
       {router.isFallback ? (
