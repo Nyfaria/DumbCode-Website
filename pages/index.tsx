@@ -33,7 +33,7 @@ const HomePage = () => {
         <section className="w-screen h-screen bg-cover bg-center">
           <BackgroundImage alt="banner" src={banner} />
           <div className="absolute top-0 translate-y-1/3 h-full text-center md:text-left md:translate-x-44">
-            <div className="flex flex-row justify-center md:justify-start">
+            <div className="flex flex-row justify-center md:justify-start pl-4">
               <h1 className="text-6xl font-semibold">DumbCode</h1>
               <div className="h-2 w-8 bg-white mt-12 ml-3 bottom-0 animate-pulse"></div>
             </div>

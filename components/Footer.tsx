@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="grid grid-flow-row md:grid-cols-4 px-4 md:px-20 lg:grid-cols-7 gap-y-10 gap-x-10 lg:gap-x-2">
         <div className="text-neutral-700 text-xs mx-4 w-full col-span-2">
           <h1 className="text-3xl">Stay Connected</h1>
-          <p>Join our community of over 500 users following our mod. We post updates on all our products on our media locations.</p>
+          <p>Join our community of over 1300 users following our mod. We post updates on all our products on our media locations.</p>
           <a className="text-blue-500" href="https://discord.gg/6mygAnq">Discord</a><br />
           <a className="text-blue-500" href="https://github.com/Dumb-Code">GitHub</a><br />
           <a className="text-blue-500" href="https://twitter.com/dumbcodemc">Twitter</a><br />
@@ -39,7 +39,7 @@ const Footer = () => {
             <h1 className="text-3xl">Disclaimer and Legalities</h1>
             <p>DumbCode is in no way affiliated with Minecraft or its owners Mojang Studios.Our content licenses are placed under their corresponding code repositories and should be treated as true pieces of software.</p>
           </div>
-          <div className="text-neutral-700 text-xs">DumbCode Website updated 2020.</div>
+          <div className="text-neutral-700 text-xs">DumbCode Website updated 2021.</div>
         </div>
       </div>
     </footer>

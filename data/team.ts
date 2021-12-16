@@ -127,6 +127,10 @@ export const pastMembers: PastMembersType[] = [
     {
         "name": "Codyrex",
         "imageName": "cody.png"
+    },
+    {
+        "name": "jglrxavpok",
+        "imageName": "jglrxavpok.png"
     }
 ]
 
