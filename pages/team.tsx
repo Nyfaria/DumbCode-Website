@@ -16,10 +16,10 @@ const TeamPage = () => {
                     <p className="font-semibold text-md text-neutral-500 ml-1">Our Amazing team of Current Contributors</p>
                 </div>
             </section>
-            <div className="bg-neutral-800 px-10 grid grid-cols-3 grid-flow-row">
+            <div className="bg-neutral-800 sm:px-10 grid lg:grid-cols-2 2xl:grid-cols-3 grid-flow-row">
                 {primaryMembers.map((member, key) => <PrimaryMemberCard key={key} member={member} />)}
             </div>
-            <div className="bg-neutral-900 bg-opacity-50 px-10 grid grid-cols-5 grid-flow-row">
+            <div className="bg-neutral-900 bg-opacity-50 px-10 grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 grid-flow-row">
                 {currentMembers.map((member, key) => <MemberCard key={key} member={member} />)}
             </div>
             <div className="bg-neutral-800 px-10">
@@ -29,7 +29,7 @@ const TeamPage = () => {
                         <p className="font-semibold text-md text-neutral-500 ml-1">Those who helped us in the past.</p>
                     </div>
                 </section>
-                <div className="grid grid-cols-6 grid-flow-row">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 grid-flow-row">
                     {pastMembers.map((member, key) => <PastMemberCard key={key} member={member} />)}
                 </div>
             </div>
