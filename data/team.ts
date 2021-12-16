@@ -21,7 +21,7 @@ export const primaryMembers: PrimaryMemberType[] = [
     {
         "name": "Brotat",
         "imageName": "brotat.png",
-        "bio": "Brotat is one of the team's texture artists for the Project Nublar Mod. He works on the smaller textures of the mod along with some of the dinosaur assets in order to make sure the mod is released at a top notch quality.",
+        "bio": "Brotat is one of the team's main texture artists for the Project Nublar Mod. He works on both the dinosaurs and non dinosaur textures in order to make sure everything flows smoothly and the mod is released at a top notch quality.",
         "roles": ["texture_artist"],
         "socials": [
             { "platform": "discord", "link": "Brotat#7369" },
