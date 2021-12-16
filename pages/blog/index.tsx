@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Container from '../../components/blog/container'
+import Container from '../../components/Container'
 import DateFormatter from '../../components/DateFormatter'
 import FeaturedPostList from '../../components/FeaturedPostList'
 import Footer from '../../components/Footer'
