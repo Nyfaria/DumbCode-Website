@@ -29,7 +29,7 @@ const Header = ({ pageName, ogImage, article }: { pageName: string, ogImage?: Og
             {article && <meta property="article:publisher" content={article.publisher} />}
             {article && <meta property="article:section" content={article.category} />}
             {article && <meta property="article:published_time " content={article.publishedTime} />}
-            {article && article.tags.map(tag => <meta property="article:tag" content={tag} />)}
+            {article && article.tags.map((tag, key) => <meta key={ "articleTag" + key } property="article:tag" content={tag} />)}
 
             {ogImage && <meta property="og:image" content={ogImage.path} />}
             {ogImage && <meta property="og:image:width" content={`${ogImage.width}`} />}
