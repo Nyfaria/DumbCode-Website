@@ -1,13 +1,13 @@
 ---
-title: 'Dynamic Routing and Static Generation'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/blog/dynamic-routing/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+title: 'Welcome to Our New Website'
+excerpt: 'DumbCode has been busy this year, and to kick off the holiday season we have been working on bringing our marketing up to date with the world. Since we are working so hard to get things ready with the DumbCode Studio and Project: Nublar we thought it was important that our website, often the first impression for new people curious about what we do, is as engaging as our other projects. So join us in welcoming our new website to the world wide web!'
+coverImage: '/blog/new-website/cover.jpg'
+date: '2021-12-15T05:35:07.322Z'
 author:
-  name: JJ Kasper
-  picture: '/blog/authors/jj.jpeg'
+  name: NeusFear
+  picture: '/images/people/neusfear.png'
 ogImage:
-  url: '/blog/dynamic-routing/cover.jpg'
+  url: '/blog/new-website/cover.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

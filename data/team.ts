@@ -92,6 +92,24 @@ export const currentMembers: CurrentMemberType[] = [
             { "platform": "github", "link": "https://github.com/bradleyq" },
             { "platform": "youtube", "link": "https://www.youtube.com/c/thebradqq" }
         ]
+    },
+    {
+        "name": "MX",
+        "imageName": "mx.jpg",
+        "roles": ["animator"],
+        "socials": [
+            { "platform": "discord", "link": "emmmmm#7181" },
+        ]
+    },
+    {
+        "name": "Rodentman87",
+        "imageName": "rodentman87.png",
+        "roles": ["programmer"],
+        "socials": [
+            { "platform": "discord", "link": "Rodentman87#8787" },
+            { "platform": "twitter", "link": "https://twitter.com/rodentman87" },
+            { "platform": "github", "link": "https://github.com/rodentman87" },
+        ]
     }
 ]
 
