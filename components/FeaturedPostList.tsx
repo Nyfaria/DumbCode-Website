@@ -42,9 +42,9 @@ const PostPreview = ({ post }: { post: PostType }) => {
 
 const Avatar = ({ name, picture }: { name: string, picture: string }) => {
   return (
-    <div className="absolute right-0 flex items-center text-white -translate-y-14">
+    <div className="absolute right-0 flex items-center text-white -translate-y-14 mr-4">
       <div className="font-semibold pb-0.5 bg-blue-500 px-5 rounded-l-md translate-x-2">{name}</div>
-      <Image src={picture} className="w-12 h-12 rounded-full mr-4 z-10" alt={name} />
+      <Image src={picture} width={48} height={48} className="w-12 h-12 rounded-full mr-4 z-10" alt={name} />
     </div>
   )
 }
