@@ -38,7 +38,7 @@ export const Carousel2 = ({ images, autoAdvance }: { images: string[], autoAdvan
 const CarouselImage = ({ img }: { img: string }) => {
     return (
         <div className="w-full h-full bg-center bg-cover flex-shrink-0">
-            <BackgroundImage src={img} width={1920} height={1080} />
+            <BackgroundImage alt="carouselImage" src={img} width={1920} height={1080} />
         </div>
     );
 }

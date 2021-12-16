@@ -34,7 +34,7 @@ export default function Post({ post, morePosts }: { post: PostType, morePosts: P
       ) : (
         <div className="bg-neutral-800">
           <div className="bg-cover bg-center h-[80vh] w-screen">
-            <BackgroundImage src={post.coverImage} width={1920} height={1080} />
+            <BackgroundImage alt="coverImage" src={post.coverImage} width={1920} height={1080} />
           </div>
           <article className="">
             <div className="max-w-4xl px-4 md:px-20 pb-10 mx-auto bg-neutral-200 -translate-y-20 rounded-lg">

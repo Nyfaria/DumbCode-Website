@@ -49,7 +49,7 @@ const ContributorTag = ({ member, role }: { member: string, role: string }) => {
     return (
         <div className="flex flex-row my-1">
             <div className="h-8 w-8 mt-1 aspect-square rounded-full bg-center bg-cover mr-2">
-                <BackgroundImage className="rounded-full" src={`/images/people/${imageName}`} width={60} height={60} />
+                <BackgroundImage alt={member} className="rounded-full" src={`/images/people/${imageName}`} width={60} height={60} />
             </div>
             <div>
                 <p className="text-xs mt-0.5 underline">{name}</p>

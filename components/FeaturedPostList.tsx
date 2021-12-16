@@ -54,7 +54,7 @@ const CoverImage = ({ title, src, slug }: { title: string, src: string, slug: st
 
   const image = (
     <div className="bg-cover bg-center aspect-video w-full rounded-t-md">
-      <BackgroundImage className="rounded-t-md" src={src} width={640} height={360} />
+      <BackgroundImage alt={title} className="rounded-t-md" src={src} width={640} height={360} />
     </div>
   )
 
