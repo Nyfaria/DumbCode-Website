@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { PostType } from '../lib/blogapi'
 import DateFormatter from './DateFormatter'
@@ -6,8 +7,8 @@ export default function FeaturedPostList({ posts }: { posts: PostType[] }) {
   return (
     <section className="pb-10">
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post) => (
-          <PostPreview post={post} />
+        {posts.map((post, index) => (
+          <PostPreview key={index} post={post} />
         ))}
       </div>
     </section>
@@ -43,7 +44,7 @@ const Avatar = ({ name, picture }: { name: string, picture: string }) => {
   return (
     <div className="absolute right-0 flex items-center text-white -translate-y-14">
       <div className="font-semibold pb-0.5 bg-blue-500 px-5 rounded-l-md translate-x-2">{name}</div>
-      <img src={picture} className="w-12 h-12 rounded-full mr-4 z-10" alt={name} />
+      <Image src={picture} className="w-12 h-12 rounded-full mr-4 z-10" alt={name} />
     </div>
   )
 }

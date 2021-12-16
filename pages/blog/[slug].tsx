@@ -1,4 +1,5 @@
 import ErrorPage from 'next/error'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Container from '../../components/Container'
 import DateFormatter from '../../components/DateFormatter'
@@ -68,14 +69,14 @@ const ReccomendedPosts = ({ posts }: { posts: PostType[] }) => {
 const Avatar = ({ name, picture }: { name: string, picture: string }) => {
   return (
     <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
+      <Image src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
       <div className="text-xl font-bold">{name}</div>
     </div>
   )
 }
 
-export async function getStaticProps({ params }: { params: any }) {
-  const post = getPostBySlug<PostType>(params.slug, [
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug, [
     'title',
     'date',
     'slug',

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Container from '../../components/Container'
@@ -8,7 +9,7 @@ import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import { getAllPosts, PostType } from '../../lib/blogapi'
 
-export default function Index({ allPosts }: {allPosts: PostType[]}) {
+export default function Index({ allPosts }: { allPosts: PostType[] }) {
 
   const latestPost = allPosts[0]
   const morePosts = allPosts.slice(1)
@@ -19,14 +20,14 @@ export default function Index({ allPosts }: {allPosts: PostType[]}) {
       <Navbar />
       <div className="text-center lg:text-left ml-40 m-10 py-4 px-20 text-white absolute bg-blue-500 bg-opacity-80 rounded-md">
         <h1 className="text-6xl font-semibold">Latest Post</h1>
-        <p className="font-semibold text-md text-neutral-300 ml-1">What's new with DumbCode.</p>
+        <p className="font-semibold text-md text-neutral-300 ml-1">What&apos;s new with DumbCode.</p>
       </div>
       {latestPost && <HeroPost post={latestPost} />}
       <section className="w-screen bg-neutral-900 bg-opacity-60 pt-10 overflow-hidden">
         <Container>
           <div className="text-center lg:text-left my-10 w-full text-white">
             <h1 className="text-6xl font-semibold">Other Posts</h1>
-            <p className="font-semibold text-md text-neutral-500 ml-1">See Updates on what we've got cooking.</p>
+            <p className="font-semibold text-md text-neutral-500 ml-1">See Updates on what we&apos;ve got cooking.</p>
           </div>
           {morePosts.length > 0 && <FeaturedPostList posts={morePosts} />}
         </Container>
@@ -40,8 +41,8 @@ const HeroPost = ({ post }: { post: PostType }) => {
 
   const router = useRouter();
   const goToPost = (e: { preventDefault: () => void; }) => {
-      e.preventDefault();
-      router.push(`/blog/${post.slug}`);
+    e.preventDefault();
+    router.push(`/blog/${post.slug}`);
   }
 
   return (
@@ -76,17 +77,17 @@ const HeroPost = ({ post }: { post: PostType }) => {
   )
 }
 
-const Avatar = ({ name, picture }: {name: string, picture: string}) => {
+const Avatar = ({ name, picture }: { name: string, picture: string }) => {
   return (
     <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
+      <Image src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
       <div className="text-xl font-bold">{name}</div>
     </div>
   )
 }
 
-const CoverImage = ({ title, src, slug }: {title: string, src: string, slug: string | undefined}) => {
-  
+const CoverImage = ({ title, src, slug }: { title: string, src: string, slug: string | undefined }) => {
+
   const image = (
     <div className="bg-cover bg-center h-[80vh] w-screen" style={{ backgroundImage: `url("${src}")` }}></div>
   )
@@ -99,7 +100,7 @@ const CoverImage = ({ title, src, slug }: {title: string, src: string, slug: str
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts<PostType[]>([
+  const allPosts = getAllPosts([
     'title',
     'date',
     'slug',

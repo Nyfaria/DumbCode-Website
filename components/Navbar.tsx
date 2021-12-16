@@ -39,7 +39,7 @@ const MobileNavbar = () => {
     );
 }
 
-const MobileNavOpenButton = ({ open, toggleOpen }: { open: boolean, toggleOpen: any }) => {
+const MobileNavOpenButton = ({ open, toggleOpen }: { open: boolean, toggleOpen: () => void }) => {
     return (
         <div className="mt-5 mr-2 md:mr-10 group" onClick={toggleOpen}>
             <div className={(open ? "translate-y-1 -rotate-45 group-hover:bg-red-500" : "-translate-y-2 group-hover:bg-neutral-500") + " rounded-full h-1 w-8 bg-white transition-all"}></div>
