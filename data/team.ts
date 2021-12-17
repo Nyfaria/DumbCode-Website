@@ -5,6 +5,28 @@ export type PastMembersType = { name: string, imageName: string }
 
 export const primaryMembers: PrimaryMemberType[] = [
     {
+        "name": "BrownBoiiWonder",
+        "imageName": "brownboiwonder.png",
+"bio": "Brownboii is the team's lead Modeler, their main contributions to the team are the machine & fence models and most of Project Nublar's dinosaur models.",
+        "roles": ["modeler"],
+        "socials": [
+            { "platform": "discord", "link": "Brownboiiwonder#0357" },
+            { "platform": "github", "link": "https://github.com/kashgummaraju%22%7D" }
+        ]
+    },
+    {
+        "name": "Wyn Price",
+        "imageName": "wynprice.png",
+        "bio": "Wyn Price is the DumbCode programming mastermind. His efforts include programming the Mods, and the backend of the new DumbCode Studio.",
+        "roles": ["programmer", "web_developer"],
+        "socials": [
+            { "platform": "discord", "link": "WynPrice#0001" },
+            { "platform": "twitter", "link": "https://twitter.com/wyn_price" },
+            { "platform": "github", "link": "https://github.com/Wyn-Price" },
+            { "platform": "youtube", "link": "https://www.youtube.com/channel/UCUh1aG2Aa1m59kwzVlBjojA" }
+        ]
+    },
+    {
         "name": "NeusFear",
         "imageName": "neusfear.png",
         "bio": "NeusFear is the team's Web frontend Developer, their main contributions to the team are the design of the DumbCode Studio, the websites, among various asset contributions for the Project Nublar Mod",
@@ -38,6 +60,16 @@ export const primaryMembers: PrimaryMemberType[] = [
         "socials": [
             { "platform": "discord", "link": "Mazikeen#7846" },
             { "platform": "twitter", "link": "https://twitter.com/Mazikeen143" },
+        ]
+    },
+    {
+        "name": "Hyper",
+        "imageName": "hyperion.png",
+        "bio": "Hyper is one of the animators for DumbCode. He contributes to the lifelike movement of most of the animals from Project Nublar.",
+        "roles": ["animator"],
+        "socials": [
+            { "platform": "discord", "link": "Hyper#5603" },
+            { "platform": "twitter", "link": "https://twitter.com/NotThatHyper" },
         ]
     }
 ]
@@ -141,6 +173,54 @@ export const pastMembers: PastMembersType[] = [
     {
         "name": "jglrxavpok",
         "imageName": "jglrxavpok.png"
+    },
+    {
+        "name": "Zenthic",
+        "imageName": "zenthic.png"
+    },
+    {
+        "name": "LordOfLustria",
+        "imageName": "lustria.png"
+    },
+    {
+        "name": "JTGhawk137",
+        "imageName": "jack.jpg"
+    },
+    {
+        "name": "Bastion",
+        "imageName": "bastion.png"
+    },
+    {
+        "name": "Dom",
+        "imageName": "dom.png"
+    },
+    {
+        "name": "Igrek",
+        "imageName": "igrek.png"
+    },
+    {
+        "name": "Ninni",
+        "imageName": "ninni.png"
+    },
+    {
+        "name": "Niruny",
+        "imageName": "niruny.png"
+    },
+    {
+        "name": "Raptorek",
+        "imageName": "raptorek.png"
+    },
+    {
+        "name": "ReaptorWhisper",
+        "imageName": "raptorwhisper.png"
+    },
+    {
+        "name": "Snow",
+        "imageName": "snow.png"
+    },
+    {
+        "name": "Wolfgank",
+        "imageName": "wolfgank.png"
     }
 ]
 

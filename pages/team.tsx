@@ -108,8 +108,8 @@ const MemberBubble = ({ member }: { member: string }) => {
 
 const SocialIcon = ({ platform, route, primary }: { platform: string, route: string, primary: boolean }) => {
 
-    const primaryIconClasses = "h-4 w-4 mt-1 ml-1 text-center";
-    const memberIconClasses = "h-3 w-3 text-center mt-1 ml-1";
+    const primaryIconClasses = "h-full w-full text-center p-1.5";
+    const memberIconClasses = "h-full w-full text-center p-1.5";
 
     const iconClasses = primary ? primaryIconClasses : memberIconClasses;
 
@@ -141,13 +141,13 @@ const SocialIcon = ({ platform, route, primary }: { platform: string, route: str
     if (platform === "discord") {
         return (
             <div className="px-2 hover:bg-neutral-700 rounded-full font-semibold transition-all mx-1 hover:scale-110 flex flex-row border border-white">
-                <div className="h-8 w-8 translate-y-1">{icon}</div>
+                <div className="h-8 w-8">{icon}</div>
                 <p className="text-xs pt-1 translate-y-1">{route}</p>
             </div>
         );
     } else { 
         return (
-            <a target="_blank" rel="noreferrer" href={route} className="pl-1 pt-1 hover:bg-neutral-700 h-8 w-8 rounded-full font-semibold transition-all mx-1 hover:scale-110 border border-white">
+            <a target="_blank" rel="noreferrer" href={route} className="relative hover:bg-neutral-700 h-8 w-8 rounded-full font-semibold transition-all mx-1 hover:scale-110 border border-white">
                 {icon}
             </a>
         );
