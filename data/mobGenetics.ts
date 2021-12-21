@@ -20,17 +20,20 @@ export type GeneType =
   "Aggression" |
   "Herd Size"
 
+export type DietModification = {
+  food: number, water: number, name: string, image: string
+}
+export type GeneModification = {
+  gene: GeneType,
+  amount: number,
+}
+export type ColourModification = string | { colour: string | string[], varient: string }
 export type GeneData = {
   image: string,
   name: string,
-  geneModifications: {
-    gene: GeneType,
-    amount: number,
-  }[],
-  dietModifications?: {
-    food: number, water: number, name: string, image: string
-  }[],
-  colours: (string | { colour: string | string[], varient: string })[]
+  geneModifications: GeneModification[],
+  dietModifications?: DietModification[],
+  colours: ColourModification[]
 }
 
 export const mobGenetics: GeneData[] = [
@@ -391,4 +394,20 @@ export const reverseMobGenetics = mobGenetics.reduce<Map<GeneType, { data: GeneD
   return map
 }, new Map())
 
-export const reverseMobDiets = mobGenetics.flatMap(mob => (mob.dietModifications ?? []).map(diet => ({ mob, diet })))
+export const reverseMobDiets = mobGenetics
+  .flatMap(mob => (mob.dietModifications ?? []).map(diet => ({ mob, diet })))
+  .reduce<Map<string, {
+    image: string,
+    data: {
+      mob: GeneData,
+      diet: DietModification,
+    }[]
+  }>>((map, value) => {
+    const array = map.get(value.diet.name)?.data ?? []
+    array.push(value)
+    map.set(value.diet.name, {
+      image: value.diet.image,
+      data: array
+    })
+    return map
+  }, new Map())
