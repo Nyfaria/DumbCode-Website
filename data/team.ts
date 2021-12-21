@@ -172,6 +172,16 @@ export const currentMembers: CurrentMemberType[] = [
             { "platform": "twitter", "link": "https://twitter.com/BAltispinax" },
             { "platform": "github", "link": "https://github.com/BizarreAltispinax" }
         ]
+    },
+    {
+        "name": "Fred",
+        "imageName": "fred.png",
+        "roles": ["texturer"],
+        "socials": [
+            { "platform": "discord", "link": "Fred.#5269" },
+            { "platform": "twitter", "link": "https://twitter.com/_ItzFred" },
+            { "platform": "github", "link": "https://github.com/ItzFred" }
+        ]
     }
 ]
 
@@ -234,7 +244,7 @@ export const pastMembers: PastMembersType[] = [
     },
     {
         "name": "Cucho",
-        "imageName": "cucho.png"
+        "imageName": "chucho.png"
     }
 ]
 
