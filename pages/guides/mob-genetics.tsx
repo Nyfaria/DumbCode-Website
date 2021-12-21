@@ -269,8 +269,8 @@ const MobGeneticsByGeneEntry = ({ name, data }: {
 }
 
 
-const formatEntity = (entity: GeneData) => `entity-${entity.name.replaceAll(" ", "-").toLowerCase()}`
-const formatDiet = (diet: string) => `diet-${diet.replaceAll(" ", "-").toLowerCase()}`
-const formatGene = (gene: string) => `gene-${gene.replaceAll(" ", "-").toLowerCase()}`
+const formatEntity = (entity: GeneData) => `entity-${entity.name.replace(/\s/g, "-").toLowerCase()}`
+const formatDiet = (diet: string) => `diet-${diet.replace(/\s/g, "-").toLowerCase()}`
+const formatGene = (gene: string) => `gene-${gene.replace(/\s/g, "-").toLowerCase()}`
 
 export default MobGeneticsPage;
