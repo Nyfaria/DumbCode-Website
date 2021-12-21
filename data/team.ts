@@ -7,7 +7,7 @@ export const primaryMembers: PrimaryMemberType[] = [
     {
         "name": "BrownBoiiWonder",
         "imageName": "brownboiwonder.png",
-"bio": "Brownboii is the team's lead Modeler, their main contributions to the team are the machine & fence models and most of Project Nublar's dinosaur models.",
+        "bio": "Brownboii is the team's lead Modeler, their main contributions to the team are the machine & fence models and most of Project Nublar's dinosaur models.",
         "roles": ["modeler"],
         "socials": [
             { "platform": "discord", "link": "Brownboiiwonder#0357" },
@@ -162,6 +162,16 @@ export const currentMembers: CurrentMemberType[] = [
             { "platform": "twitter", "link": "https://twitter.com/Ely27290042" },
             { "platform": "github", "link": "https://github.com/Elysisy" }
         ]
+    },
+    {
+        "name": "Mr.BizarreMegaloceros",
+        "imageName": "bizarrealtispinax.webp",
+        "roles": ["modeler"],
+        "socials": [
+            { "platform": "discord", "link": "Mr.BizarreMegaloceros#1993" },
+            { "platform": "twitter", "link": "https://twitter.com/BAltispinax" },
+            { "platform": "github", "link": "https://github.com/BizarreAltispinax" }
+        ]
     }
 ]
 
@@ -221,6 +231,10 @@ export const pastMembers: PastMembersType[] = [
     {
         "name": "Wolfgank",
         "imageName": "wolfgank.png"
+    },
+    {
+        "name": "Cucho",
+        "imageName": "cucho.png"
     }
 ]
 

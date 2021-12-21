@@ -27,7 +27,7 @@ const StudioPage = () => {
             <Header pageName="Studio" pageDesc="Everything you need to know about the DumbCode Studio" ogImage={{"path": banner, width: 1280, height: 640}} />
             <Navbar />
 
-            <section className="w-screen h-screen 2xl:h-[80vh] bg-cover bg-center">
+            <section className="w-screen h-screen 2xl:h-[80vh] bg-cover bg-center relative">
                 <BackgroundImage alt="banner" src={banner} />
                 <div className="translate-y-1/3 h-full text-center text-white absolute top-0">
                     <div className="md:flex md:flex-row w-screen justify-center">
