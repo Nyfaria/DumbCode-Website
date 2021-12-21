@@ -82,7 +82,7 @@ const MobGeneticEntry = ({ geneData }: { geneData: GeneData }) => {
       <a href={`#${id}`} id={id} className="text-2xl font-semibold text-white">{geneData.name}</a>
       <div className="flex flex-row">
         <div className="w-32 h-32 relative mt-2 mr-2">
-          <Image layout="fill" objectFit="contain" src={`/images/guides/genetics/${geneData.image}`} />
+          <Image alt={`Entity ${geneData.name}`} layout="fill" objectFit="contain" src={`/images/guides/genetics/${geneData.image}`} />
         </div>
         <div className="flex-grow flex flex-col ">
           {geneData.geneModifications.length !== 0 &&
@@ -138,7 +138,7 @@ const MobDietModificationEntry = ({ diet }: { diet: DietModification }) => {
     <div className="flex flex-col text-white mr-10">
       <a href={`#${formatDiet(diet.name)}`} className="font-semibold text-white">{diet.name}</a>
       <div className="w-16 h-16 relative mt-2 mr-2">
-        <Image layout="fill" objectFit="contain" src={`/images/guides/genetics/${diet.image}`} />
+        <Image alt={`Diet ${diet.name}`} layout="fill" objectFit="contain" src={`/images/guides/genetics/${diet.image}`} />
       </div>
       <span className="text-blue-600">+{diet.water} Water</span>
       <span className="text-amber-600">+{diet.food} Food</span>
@@ -185,7 +185,7 @@ const MobGeneticsByDiet = () => {
         if (!dietInfo) {
           return <>!!ERROR!!</>
         }
-        return <MobGeneticsByDietEntry name={key} data={dietInfo} />
+        return <MobGeneticsByDietEntry key={key} name={key} data={dietInfo} />
       })}
     </div>
   )
@@ -206,7 +206,7 @@ const MobGeneticsByDietEntry = ({ name, data }: {
       <a href={`#${id}`} id={id} className="text-2xl font-semibold text-white">{name}</a>
       <div className="flex flex-row w-full">
         <div className="w-32 h-32 relative mt-2 mr-2">
-          <Image layout="fill" objectFit="contain" src={`/images/guides/genetics/${data.image}`} />
+          <Image alt={`Diet ${data.image}`} layout="fill" objectFit="contain" src={`/images/guides/genetics/${data.image}`} />
         </div>
         {data.data.map((info, i) => (
           <div key={i} className="flex flex-col mr-5">
@@ -236,7 +236,7 @@ const MobGeneticsByGene = () => {
         if (!geneInfo) {
           return <>!!ERROR!!</>
         }
-        return <MobGeneticsByGeneEntry name={key} data={geneInfo} />
+        return <MobGeneticsByGeneEntry key={key} name={key} data={geneInfo} />
       })}
     </div>
   )
@@ -252,10 +252,10 @@ const MobGeneticsByGeneEntry = ({ name, data }: {
   return (
     <div key={name} className="mb-5 flex flex-col">
       <a href={`#${id}`} id={id} className="text-2xl font-semibold text-white">{name}</a>
-      {data.map(datum => {
+      {data.map((datum, i) => {
         const positive = datum.amount > 0
         return (
-          <div className="flex flex-row">
+          <div key={i} className="flex flex-row">
             <a href={`#${formatEntity(datum.data)}`} className="text-white">
               {datum.data.name}:
             </a>
