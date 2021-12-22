@@ -193,7 +193,7 @@ export const mobGenetics: GeneData[] = [
   },
   {
     image: "llama.gif",
-    name: "LLama",
+    name: "Llama",
     geneModifications: [
       { gene: "Taming Chance", amount: 0.25 },
       { gene: "Defence", amount: 0.25 },
