@@ -6,7 +6,7 @@ module.exports = {
       {
         source: '/discord',
         destination: 'https://discord.gg/6mygAnq',
-        permanent: false,
+        permanent: true,
       },
     ]
   },
