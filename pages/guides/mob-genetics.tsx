@@ -232,7 +232,7 @@ const MobGeneticsByDietEntry = ({ name, data }: {
 const MobGeneticsByGene = () => {
   return (
     <div className="mt-5">
-      <a id={geneticsByGeneId} href={`#${geneticsByGeneId}`} className="text-4xl font-semibold text-white mt-32">Genetics By Diet</a>
+      <a id={geneticsByGeneId} href={`#${geneticsByGeneId}`} className="text-4xl font-semibold text-white mt-32">Genetics By Gene</a>
       {Array.from(reverseMobGenetics.keys()).sort().map(key => {
         const geneInfo = reverseMobGenetics.get(key)
         if (!geneInfo) {
