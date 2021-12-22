@@ -9,7 +9,7 @@ const BasicPage: FC<HeaderProps> = (props) => {
       <Header {...props} />
       <div className="flex flex-col w-full h-full">
         <Navbar />
-        <div className="w-full flex-grow overflow-y-scroll dumbcode-scrollbar">
+        <div className="w-full flex-grow overflow-y-scroll overflow-x-hidden dumbcode-scrollbar">
           {props.children}
           <Footer />
         </div>
