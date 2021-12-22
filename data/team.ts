@@ -1,6 +1,6 @@
-export type SocialsTpye = { platform: string, link: string }
-export type PrimaryMemberType = { name: string, imageName: string, bio: string, roles: string[], socials: SocialsTpye[] }
-export type CurrentMemberType = { name: string, imageName: string, roles: string[], socials: SocialsTpye[] }
+export type SocialsType = { platform: string, link: string }
+export type PrimaryMemberType = { name: string, imageName: string, bio: string, roles: string[], socials: SocialsType[] }
+export type CurrentMemberType = { name: string, imageName: string, roles: string[], socials: SocialsType[] }
 export type PastMembersType = { name: string, imageName: string }
 
 export const primaryMembers: PrimaryMemberType[] = [

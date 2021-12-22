@@ -9,9 +9,24 @@ export const projectNublarInfo: ModInfoType = {
     license: "https://github.com/Dumb-Code/ProjectNublar/blob/master/LICENSE.md",
     download: "",
     contributors: [
-        { name: "wynprice", role: "developer" },
-        { name: "brownboiwonder", role: "modeler" },
-        { name: "neusfear", role: "various"}
+        { name: "wyn price", role: "developer" },
+        { name: "brownboiiwonder", role: "modeler" },
+        { name: "neusfear", role: "various"},
+        { name: "brotat", role: "texturer"},
+        { name: "mazikeen", role: "texturer"},
+        { name: "hyper", role: "animator"},
+        { name: "gegy", role: "programmer"},
+        { name: "sindavar", role: "modeler & Texturer"},
+        { name: "lucca", role: "concept artist"},
+        { name: "floofhips", role: "texturer"},
+        { name: "loxures", role: "modeler"},
+        { name: "thebradqq", role: "Modeler & Texturer"},
+        { name: "MX", role: "animator"},
+        { name: "rodentman87", role: "programmer"},
+        { name: "elyasisly", role: "sound artist"},
+        { name: "Mr.BizarreMegaloceros", role: "modeler"},
+        { name: "fred", role: "texturer"}
+        
     ],
     image: "/images/project_nublar/squad.jpg"
 }

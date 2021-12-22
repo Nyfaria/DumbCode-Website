@@ -34,7 +34,7 @@ const DumbLibraryPage = () => {
 
             <section className="mt-10">
                 <h1 className="text-3xl text-white">Release Date</h1>
-                <p className="text-neutral-500">DumbCode plans to release a single beta for Project Nublar for Forge 1.12.2, after which all development will move to the lastest forge version.<br />No dates have been set for release or the beta.</p>
+                <p className="text-neutral-500">DumbCode plans to release a single beta for Project Nublar for Forge 1.16.4, after which all development will move to the lastest forge version.<br />No dates have been set for release or the beta.</p>
             </section>
 
             <section className="mt-10 mb-20">
