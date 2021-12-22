@@ -44,22 +44,22 @@ const MobGeneticsIndex = () => {
     <div className="mx-5 my-2 text-white">
       <h2 className="text-4xl font-semibold text-white">Index</h2>
 
-      <CollapsableIndex id={geneticsByMobId} title="Genetics By Mob">
+      <CollapsableIndex id={geneticsByMobId} title="Genetics By Mob" maxHeightClass="max-h-[1000px]">
         {mobGenetics.map((genetics, i) => <a key={i} href={`#${formatEntity(genetics)}`} >{genetics.name}</a>)}
       </CollapsableIndex>
 
-      <CollapsableIndex id={geneticsByDietId} title="Genetics By Diet">
+      <CollapsableIndex id={geneticsByDietId} title="Genetics By Diet" maxHeightClass="max-h-[200px]">
         {Array.from(reverseMobDiets.keys()).sort().map((diet, i) => <a key={i} href={`#${formatDiet(diet)}`} >{diet}</a>)}
       </CollapsableIndex>
 
-      <CollapsableIndex id={geneticsByGeneId} title="Genetics By Gene">
+      <CollapsableIndex id={geneticsByGeneId} title="Genetics By Gene" maxHeightClass="max-h-[500px]">
         {Array.from(reverseMobGenetics.keys()).sort().map((gene, i) => <a key={i} href={`#${formatGene(gene)}`} >{gene}</a>)}
       </CollapsableIndex>
     </div>
   )
 }
 
-const CollapsableIndex: FC<{ id: string, title: string }> = ({ id, title, children }) => {
+const CollapsableIndex: FC<{ id: string, title: string, maxHeightClass: string }> = ({ id, title, children, maxHeightClass }) => {
   const [collapsed, setCollapsed] = useState(true)
   return (
     <div className="p-1 border-b last:border-none">
@@ -69,8 +69,8 @@ const CollapsableIndex: FC<{ id: string, title: string }> = ({ id, title, childr
           <SvgCaret className="w-3" />
         </button>
       </div>
-      <div className="ml-5 flex flex-col">
-        {!collapsed && children}
+      <div className={"ml-5 flex flex-col overflow-hidden transition-height " + (collapsed ? "max-h-0" : maxHeightClass)}>
+        {children}
       </div>
     </div>
   )
