@@ -172,13 +172,13 @@ const MobDietModificationEntry = ({ diet }: { diet: DietModification }) => {
 
 const MobColourCell = ({ colour }: { colour: ColourData }) => {
   return (
-    <div className="group">
+    <div className="group relative">
       <div className="flex-row w-8 h-8 m-1 relative border border-black rounded-full overflow-hidden">
         <div className="z-0 absolute w-full h-full flex flex-row rounded-full">
           {colour.colours.map((colour, i) => <div className="flex-grow" key={i} style={{ backgroundColor: colour }} />)}
         </div>
       </div>
-      <div className="absolute font-semibold text-white hidden z-50 group-hover:block bg-neutral-900 rounded-md text-xs p-1">
+      <div className="absolute font-semibold text-white hidden z-50 group-hover:inline-block bg-neutral-900 rounded-md text-xs p-1">
         {colour.varient}
       </div>
     </div>
