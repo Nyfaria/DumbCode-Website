@@ -328,7 +328,6 @@ export const mobGenetics: GeneData[] = [
       { gene: "Size", amount: -0.5 },
     ],
     colours: [
-      { varient: 'Black Tropical Fish', colour: '#1D1D21' },
       { varient: 'Red Tropical Fish', colour: '#B02E26' },
       { varient: 'Green Tropical Fish', colour: '#5E7C16' },
       { varient: 'Brown Tropical Fish', colour: '#835432' },
