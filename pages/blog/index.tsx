@@ -17,9 +17,9 @@ export default function Index({ allPosts }: { allPosts: PostType[] }) {
 
   return (
     <div className="overflow-x-hidden bg-neutral-800 relative">
-      <Header pageName="Blog" pageDesc={`The DumbCode Blog. Read about our latest post: ${latestPost.title}`} ogImage={{"path": latestPost.coverImage, width: 1280, height: 640}} />
+      <Header pageName="Blog" pageDesc={`The DumbCode Blog. Read about our latest post: ${latestPost.title}`} ogImage={{ "path": latestPost.coverImage, width: 1280, height: 640 }} />
       <Navbar />
-      <div className="text-center lg:text-left md:ml-40 m-10 py-4 px-20 text-white absolute bg-blue-500 bg-opacity-80 rounded-md z-10">
+      <div className="text-center lg:text-left md:ml-40 m-10 py-4 px-20 text-white absolute bg-purple-500 bg-opacity-80 rounded-md z-10">
         <h1 className="text-6xl font-semibold">Latest Post</h1>
         <p className="font-semibold text-md text-neutral-300 ml-1">What&apos;s new with DumbCode.</p>
       </div>
