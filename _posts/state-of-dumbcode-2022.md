@@ -1,6 +1,6 @@
 ---
 title: 'State of DumbCode going into 2022'
-excerpt: 'Whilst it may seem like DumbCode has had no progress, behind the scene, there is a lot going on.'
+excerpt: 'Whilst it may seem like DumbCode has had no progress, behind the scene, there is a lot going on. Find out in this blog post whats happening behind the scenes currently with Project: Nublar and the team.'
 coverImage: '/blog/state-of-dumbcode-2022/cover.png'
 date: '2022-02-06T15:42:16Z'
 author:
