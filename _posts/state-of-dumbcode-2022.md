@@ -14,7 +14,7 @@ Has DumbCode passed away? In short? No. In long? Also no, but in more detail.
 While at times it can seem like DumbCode is no more, there is almost daily work being done behind the scenes. Whether that be discussing ideas, giving internal feedback on textures/models/animations or creating content, rarely a day goes by without some sort of message (even if it’s just photos of capybaras). This progress however, can be difficult to show, and thus it’s been almost 200 days since we posted an update.
 
 ## Why progress can be difficult to show
-### Obserable progress
+### Observable progress
 You have to understand that not all progress is observable, especially once the initial progress has been made. In game development (any in many other programming developments) at the very beginning, there is nothing. As you add content you can show it off and move on to the next piece of content to add, and then show that off. Without careful planning, you can then get to a point where you have loads of cool content, but none of it links together.     
 
 
