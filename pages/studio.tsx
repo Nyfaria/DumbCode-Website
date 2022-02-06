@@ -94,8 +94,8 @@ const StudioPage = () => {
                     flip={false}
                 />
                 <AboutViewSection
-                    title="Bring the Textuerers Back"
-                    subtitle="Finally a built in texture tool that isnt bad."
+                    title="Bring the Texture Artists Back"
+                    subtitle="Finally a built in texture tool that isn't bad."
                     content={<TexturerDesc className={descriptionClasses} />}
                     image={texturer}
                     flip={true}

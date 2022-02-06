@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="text-neutral-700 text-xs mx-4 w-full col-span-2">
           <h1 className="text-3xl">Our Mission</h1>
-          <div>The DumbCode <div className="text-blue-500 inline-block"><Link href="/team">Team</Link></div> is commited to bringing high quality content to members of our comminity and expanding our community to new interested people. We believe in equal opportunity to contributors and we will strive to create a fair workplace while keeping the progress organized and thought out.</div>
+          <div>The DumbCode <div className="text-blue-500 inline-block"><Link href="/team">Team</Link></div> is commited to bringing high quality content to members of our community and expanding our community to new interested people. We believe in equal opportunity to contributors and we will strive to create a fair workplace while keeping the progress organized and thought out.</div>
         </div>
         <div className="mx-4 w-full col-span-2 lg:col-span-1">
           <div className="text-neutral-700 text-xs">
@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="mx-4 w-full col-span-2">
           <div className="text-neutral-700 text-xs">
             <h1 className="text-3xl">Other Stuff</h1>
-            <p>DumbCode is in no way affiliated with Minecraft or its owners Mojang Studios.Our content licenses are placed under their corresponding code repositories and should be treated as true pieces of software.</p>
+            <p>DumbCode is in no way affiliated with Minecraft or its owners Mojang Studios. Our content licenses are placed under their corresponding code repositories and should be treated as true pieces of software.</p>
             <div className="text-neutral-700 text-xs mt-2 mb-10">DumbCode Website updated 2021.</div>
             <a href="https://vercel.com/?utm_source=dumbcode&utm_campaign=oss"><SvgPoweredByVercel /></a>
           </div>
