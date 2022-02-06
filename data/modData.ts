@@ -1,7 +1,20 @@
 export type ModContributorType = { name: string, role: string }
-export type ModInfoType = { name: string, source: string, wiki: string, license: string, description: string, download: string, contributors: ModContributorType[], image: string }
+export type ModGuideType = { name: string, route: string }
+export type ModInfoType = {
+    route: string,
+    name: string,
+    source: string,
+    wiki: string,
+    license: string,
+    description: string,
+    download: string,
+    contributors: ModContributorType[],
+    image: string,
+    guides: ModGuideType[]
+}
 
 export const projectNublarInfo: ModInfoType = {
+    route: "projectnublar",
     name: "Project Nublar",
     description: "Project Nublar is a mod for Minecraft that adds things related to Jurassic Park to the game.",
     source: "https://github.com/Dumb-Code/ProjectNublar",
@@ -26,12 +39,15 @@ export const projectNublarInfo: ModInfoType = {
         { name: "elyasisly", role: "sound artist"},
         { name: "Mr.BizarreMegaloceros", role: "modeler"},
         { name: "fred", role: "texturer"}
-        
     ],
-    image: "/images/project_nublar/squad.jpg"
+    image: "/images/project_nublar/squad.jpg",
+    guides: [
+        {name: "Mob Genetics", route: "mob-genetics"}
+    ]
 }
 
 export const dumbLibraryInfo: ModInfoType = {
+    route: "dumblibrary",
     name: "DumbLibrary",
     description: "A libary mod used in DumbCode's mods.",
     source: "https://github.com/Dumb-Code/DumbLibrary",
@@ -39,13 +55,15 @@ export const dumbLibraryInfo: ModInfoType = {
     license: "https://github.com/Dumb-Code/DumbLibrary/blob/master/LICENSE.md",
     download: "https://www.curseforge.com/minecraft/mc-mods/dumb-library",
     contributors: [
-        { name: "wynprice", role: "developer" },
+        { name: "wyn price", role: "developer" },
         { name: "gegy", role: "contributor"}
     ],
-    image: "/images/dumb_library.bmp"
+    image: "/images/dumb_library.bmp",
+    guides: []
 }
 
 export const gradleHookInfo: ModInfoType = {
+    route: "gradlehook",
     name: "GradleHook",
     description: "GradleHook is a gradle plugin that adds a POST request as a gradle task.",
     source: "https://github.com/Dumb-Code/GradleHook",
@@ -53,7 +71,8 @@ export const gradleHookInfo: ModInfoType = {
     license: "https://github.com/Dumb-Code/GradleHook/blob/master/LICENSE",
     download: "",
     contributors: [
-        { name: "wynprice", role: "developer" }
+        { name: "wyn price", role: "developer" }
     ],
-    image: "/images/gradle_hook.bmp"
+    image: "/images/gradle_hook.bmp",
+    guides: []
 }

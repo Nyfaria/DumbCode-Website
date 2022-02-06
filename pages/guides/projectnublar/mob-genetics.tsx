@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { FC, useState } from "react";
-import BasicPage from "../../components/BasicPage";
-import { SvgCaret } from "../../components/Icons";
-import { DietModification, GeneData, GeneModification, mobGenetics, reverseMobDiets, reverseMobGenetics } from "../../data/mobGenetics";
+import BasicPage from "../../../components/BasicPage";
+import { SvgCaret } from "../../../components/Icons";
+import { DietModification, GeneData, GeneModification, mobGenetics, reverseMobDiets, reverseMobGenetics } from "../../../data/mobGenetics";
 
 const geneticsByMobId = "genetics-by-id"
 const geneticsByDietId = "genetics-by-diet"
