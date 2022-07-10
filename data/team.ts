@@ -176,7 +176,7 @@ export const currentMembers: CurrentMemberType[] = [
     {
         "name": "Fred",
         "imageName": "fred.png",
-        "roles": ["texturer"],
+        "roles": ["texture_artist"],
         "socials": [
             { "platform": "discord", "link": "Fred.#5269" },
             { "platform": "twitter", "link": "https://twitter.com/_ItzFred" },
