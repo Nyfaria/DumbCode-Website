@@ -43,6 +43,10 @@ I'm going to take the opportunity to reach out to the community. If you or anyon
 
 Wow, where to even begin talking about the studio? We have done so much work and made so much progress. Wyn, our backend developer for the studio dedicated a couple of weeks for 8-5 development to the studio to knock out a huge number of large tasks remaining. That brought us much closer to a beta for the studio. It's very hard to give a sense of progress for the studio since its scope is so large. We have been developing the studio since 2019 and if you've kept up with the [#github-site](https://discord.com/channels/648907519166513172/648913842730172427) channel on our [Discord Server](https://discord.gg/6mygAnq) you know it's been non-stop since we started, but I'm going to try.
 
+### Project
+![assets repo](/blog/summer-round-up-2022/project.png)
+The project tab is complete for now, not much to add until post release!
+
 ### Modeler
 ![assets repo](/blog/summer-round-up-2022/modeler.png)
 We are almost comfortable saying that the Modeler is done. In a sense that it is usable and most of the bugs have been worked out. We have a lot more features that we want to add in the future, but we are labeling those features as "nice to have", but not vital to the Studio's usefulness.
