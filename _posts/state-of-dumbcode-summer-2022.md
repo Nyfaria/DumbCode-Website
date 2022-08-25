@@ -116,7 +116,7 @@ We have been working on some cool stuff on the business side of DumbCode recentl
 As some of you may have noticed if you're in the bedrock community, we have entered into a collaborative partnership with CompyCraft. Their team is porting our mod to the Bedrock edition of the game. Their team and our team are working independently, they have purchased usage rights to use our assets. 
 
 ### What Does This Mean??
-Campcraft has been generous in their investment in our assets. This means that the team has some money right now for covering development costs, including hiring animators as we mentioned earlier in the blog post. It also means that when their addon releases and the initial investment is paid off, we will be making recurring income from a portion of the money made from the bedrock addon to continue to support our team and its projects.
+CompyCraft has been generous in their investment in our assets. This means that the team has some money right now for covering development costs, including hiring animators as we mentioned earlier in the blog post. It also means that when their addon releases and the initial investment is paid off, we will be making recurring income from a portion of the money made from the bedrock addon to continue to support our team and its projects.
 
 **The Java version of the mod will continue to be free. Forever.**
 
