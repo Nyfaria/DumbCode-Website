@@ -20,3 +20,7 @@
 .markdown a {
   @apply text-blue-600 hover:underline
 }
+
+.markdown li {
+  @apply list-disc
+}
