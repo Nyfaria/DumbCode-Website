@@ -116,13 +116,13 @@ export const currentMembers: CurrentMemberType[] = [
         ]
     },
     {
-        "name": "Loxures",
-        "imageName": "loxures.jpg",
-        "roles": ["modeler"],
+        "name": "Katostrophic",
+        "imageName": "katostrophic.jpg",
+        "roles": ["modeler", "texture_artist"],
         "socials": [
-            { "platform": "discord", "link": "Loxures#5985" },
-            { "platform": "twitter", "link": "https://twitter.com/Loxures_" },
-            { "platform": "github", "link": "https://github.com/Loxures" }
+            { "platform": "discord", "link": "katostrophic#7421" },
+            { "platform": "twitter", "link": "https://twitter.com/kat0strophic" },
+            { "platform": "github", "link": "https://github.com/kat0strophic" }
         ]
     },
     {
